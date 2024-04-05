@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "159724613309",
+    "project_id": "betel-app",
+    "storage_bucket": "betel-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:159724613309:android:5de38c77be63e44fed91d4",
+        "android_client_info": {
+          "package_name": "com.example.my_first_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCKYNyMfKUqfp8flyBZs92x96iDoa5YT-M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

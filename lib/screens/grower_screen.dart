@@ -1,31 +1,25 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-
 import 'package:my_first_app/screens/seller_home.dart';
 
 
+class GrowerScreen extends StatefulWidget {
+  const GrowerScreen({super.key});
 
+  @override
+  State<GrowerScreen> createState() => _GrowerScreenState();
+}
 
-class HomeScreen extends StatelessWidget {
-  const HomeScreen({super.key});
-
-  //@override
-  //State<HomeScreen> createState() => _HomeScreenState();
-//}
-
-//class _HomeScreenState extends State<HomeScreen> {
+class _GrowerScreenState extends State<GrowerScreen> {
   //final _formHomeScreenKey = GlobalKey<FormState>();
-  //bool agreePersonalData = true;
-  //@override
+  bool agreePersonalData = true;
+  @override
   @override
   Widget build(BuildContext context) {
-    //return MaterialApp(
-      //debugShowCheckedModeBanner: false,
-      //title: "betel app",
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: "betel app",
       
-       //home: 
-       
-       return Scaffold(
+       home: Scaffold(
          backgroundColor:const Color.fromARGB(255, 1, 86, 6),
         appBar: AppBar(
           backgroundColor:const Color.fromARGB(255, 2, 32, 1),
@@ -63,11 +57,17 @@ class HomeScreen extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
                     GestureDetector(
-                      onTap: (){
-                        Get.to(const SellerHome());
+                      onTap:() {
+                        Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (e) => const SellerHome()
+                          ),
+
+                         );
                       },
                       child: Container(
-                        padding:const EdgeInsets.all(15), 
+                        padding:const EdgeInsets.all(15),
                         
                         decoration: 
                         BoxDecoration(borderRadius: BorderRadius.circular(13),
@@ -387,8 +387,6 @@ class HomeScreen extends StatelessWidget {
                           ),
                         ),
                         const SizedBox(width: 10),
-
-                       
                         
                         
                         GestureDetector(
@@ -455,8 +453,6 @@ class HomeScreen extends StatelessWidget {
                 ),
 
              //footer
-
-             
              
               Container(
                 height: 2,
@@ -485,12 +481,11 @@ class HomeScreen extends StatelessWidget {
                 ),
 
               ],
-              
             ),
           ),
         ),
-      );
-    
+      ),
+    );
   }
 }
 

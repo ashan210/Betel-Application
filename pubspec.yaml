@@ -36,8 +36,18 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.6
   icons_plus: ^4.0.0
+  firebase_core: ^2.27.2
+  cloud_firestore: ^4.15.10
+  get: ^4.6.6
+  dropdown_button2: ^2.3.9
+  json_serializable: ^6.7.1
+  build_runner: ^2.4.9
+  #json_annotation: ^4.8.1
+  
+  
 
 dev_dependencies:
+  
   flutter_test:
     sdk: flutter
 

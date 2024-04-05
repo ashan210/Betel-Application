@@ -1,10 +1,15 @@
 import 'package:flutter/material.dart';
+
+import 'package:my_first_app/screens/home_screen.dart';
+
+
 import 'package:my_first_app/screens/signin_screen.dart';
 import 'package:my_first_app/screens/signup_screen.dart';
-import 'package:my_first_app/screens/home_screen.dart';
 import 'package:my_first_app/theme/theme.dart';
 import 'package:my_first_app/widgets/custom_scaffold.dart';
 import 'package:my_first_app/widgets/welcome_button.dart';
+
+
 
 class WelcomeScreen extends StatelessWidget {
   const WelcomeScreen({super.key});
@@ -47,14 +52,23 @@ class WelcomeScreen extends StatelessWidget {
 
 
 //additonal button ready to delete
-                     //Expanded(
-                    //child: WelcomeButton(
-                      //buttonText: 'Home',
-                      //onTap: const HomeScreen(),
-                      //color: Colors.white,
-                      //textColor: lightColorScheme.primary,
-                    //),
-                  //),
+                     Expanded(
+                    child: WelcomeButton(
+                      buttonText: 'seller',
+                      onTap: const HomeScreen(),
+                      color: Colors.white,
+                      textColor: lightColorScheme.primary, onPressed: () {},
+                    ),
+                  ),
+                  //delete
+                   Expanded(
+                    child: WelcomeButton(
+                      buttonText: 'grower',
+                      onTap: const HomeScreen(),
+                      color: Colors.white,
+                      textColor: lightColorScheme.primary, onPressed: () {  },
+                    ),
+                  ),
                   //delete
 
           Flexible(
@@ -63,12 +77,12 @@ class WelcomeScreen extends StatelessWidget {
               alignment: Alignment.bottomRight,
               child: Row(
                 children: [
-                  const Expanded(
+                   Expanded(
                     child: WelcomeButton(
                       buttonText: 'Sign in',
-                      onTap: SignInScreen(),
+                      onTap: const SignInScreen(),
                       color: Colors.transparent,
-                      textColor: Colors.white,
+                      textColor: Colors.white, onPressed: () {  },
                     ),
                   ),
                   Expanded(
@@ -76,7 +90,7 @@ class WelcomeScreen extends StatelessWidget {
                       buttonText: 'Sign up',
                       onTap: const SignUpScreen(),
                       color: Colors.white,
-                      textColor: lightColorScheme.primary,
+                      textColor: lightColorScheme.primary, onPressed: () {  },
                     ),
                   ),
                 ],
