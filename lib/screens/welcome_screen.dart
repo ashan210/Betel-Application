@@ -32,13 +32,13 @@ class WelcomeScreen extends StatelessWidget {
                               fontSize: 45.0,
                               fontWeight: FontWeight.w600,
                             )),
-                        TextSpan(
-                            text:
-                                '\nEnter personal details to your employee account',
-                            style: TextStyle(
-                              fontSize: 20,
+                        //TextSpan(
+                            //text:
+                                //'\nEnter personal details to your employee account',
+                            //style: TextStyle(
+                              //fontSize: 20,
                               // height: 0,
-                            ))
+                           // ))
                       ],
                     ),
                   ),
@@ -47,14 +47,14 @@ class WelcomeScreen extends StatelessWidget {
 
 
 //additonal button ready to delete
-                     Expanded(
-                    child: WelcomeButton(
-                      buttonText: 'Home',
-                      onTap: const HomeScreen(),
-                      color: Colors.white,
-                      textColor: lightColorScheme.primary,
-                    ),
-                  ),
+                     //Expanded(
+                    //child: WelcomeButton(
+                      //buttonText: 'Home',
+                      //onTap: const HomeScreen(),
+                      //color: Colors.white,
+                      //textColor: lightColorScheme.primary,
+                    //),
+                  //),
                   //delete
 
           Flexible(
