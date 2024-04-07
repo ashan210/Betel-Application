@@ -1,25 +1,32 @@
 import 'package:flutter/material.dart';
-import 'package:my_first_app/screens/seller_home.dart';
+import 'package:get/get.dart';
+import 'package:my_first_app/screens/grower_sell_home.dart';
 
 
-class GrowerScreen extends StatefulWidget {
+
+
+
+
+class GrowerScreen extends StatelessWidget {
   const GrowerScreen({super.key});
 
-  @override
-  State<GrowerScreen> createState() => _GrowerScreenState();
-}
+  //@override
+  //State<HomeScreen> createState() => _HomeScreenState();
+//}
 
-class _GrowerScreenState extends State<GrowerScreen> {
+//class _HomeScreenState extends State<HomeScreen> {
   //final _formHomeScreenKey = GlobalKey<FormState>();
-  bool agreePersonalData = true;
-  @override
+  //bool agreePersonalData = true;
+  //@override
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: "betel app",
+    //return MaterialApp(
+      //debugShowCheckedModeBanner: false,
+      //title: "betel app",
       
-       home: Scaffold(
+       //home: 
+      
+       return Scaffold(
          backgroundColor:const Color.fromARGB(255, 1, 86, 6),
         appBar: AppBar(
           backgroundColor:const Color.fromARGB(255, 2, 32, 1),
@@ -58,13 +65,7 @@ class _GrowerScreenState extends State<GrowerScreen> {
                   children: [
                     GestureDetector(
                       onTap:() {
-                        Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (e) => const SellerHome()
-                          ),
-
-                         );
+                        Get.to(const GrowerSellHome());
                       },
                       child: Container(
                         padding:const EdgeInsets.all(15),
@@ -481,11 +482,12 @@ class _GrowerScreenState extends State<GrowerScreen> {
                 ),
 
               ],
+              
             ),
           ),
         ),
-      ),
-    );
+      );
+    
   }
 }
 

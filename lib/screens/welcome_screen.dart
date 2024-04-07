@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_first_app/screens/grower_screen.dart';
 
 import 'package:my_first_app/screens/home_screen.dart';
 
@@ -64,7 +65,7 @@ class WelcomeScreen extends StatelessWidget {
                    Expanded(
                     child: WelcomeButton(
                       buttonText: 'grower',
-                      onTap: const HomeScreen(),
+                      onTap: const GrowerScreen(),
                       color: Colors.white,
                       textColor: lightColorScheme.primary, onPressed: () {  },
                     ),
