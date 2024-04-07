@@ -55,6 +55,17 @@ class AddListing extends StatelessWidget {
               ),
               const SizedBox(height: 10),
               TextField(
+                controller: ctrl.sellerContactNumber,
+                decoration: InputDecoration(
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(10)
+                  ),
+                  label: const Text('Contact Number'),
+                  hintText: 'Add your Contact Number'
+                ),
+              ),
+              const SizedBox(height: 10),
+              TextField(
                 controller: ctrl.sellerLargePrice,
                 decoration: InputDecoration(
                   border: OutlineInputBorder(

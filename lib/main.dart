@@ -1,6 +1,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:my_first_app/controller/grower_sell_home_controller.dart';
 import 'package:my_first_app/controller/seller_hm_controller.dart';
 import 'package:my_first_app/screens/welcome_screen.dart';
 import 'package:my_first_app/theme/theme.dart';
@@ -14,6 +15,7 @@ Future<void> main() async {
     options: DefaultFirebaseOptions.currentPlatform);
     //? registering my controller
     Get.put(SellerHMController());
+    Get.put(GrowerSellHomeController());
   runApp(const MyApp());
 }
 
