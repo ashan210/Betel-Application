@@ -12,57 +12,66 @@ class GrowerSellHome extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetBuilder<GrowerSellHomeController>(builder: (ctrl){
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('Betel Sellers', style: TextStyle(fontWeight: FontWeight.bold),),
-      ),
-      body: Column(
-        children: [
-          SizedBox(
-            height: 50,
-            child: ListView.builder(
-              scrollDirection: Axis.horizontal,
-              itemCount: ctrl.sellers.length,
-              itemBuilder: (context, index){
-                return Padding(
-                  padding: const EdgeInsets.all(6),
-                  child: Chip(label: Text('Dompe')),
-                );
-              }),
-          ),
-          
-            
-              DropDown(
-                items: ['Dompe','Gampaha','Ganemulla','Delgoda'],
-              selectedItemText: 'Location',
-              onSelected: (selected){},
-              ),
-              
-              Expanded(
-                child: GridView.builder(
-                  gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2,
-                   childAspectRatio: 1.5,
-                   crossAxisSpacing: 8,
-                   mainAxisSpacing: 8
-                ), 
-                itemCount: ctrl.sellers.length,
+    return RefreshIndicator(
+      onRefresh: () async{ 
+        ctrl.fetchSellers();
+       },
+      child: Scaffold(
+        appBar: AppBar(
+          title: Text('Betel Sellers', style: TextStyle(fontWeight: FontWeight.bold),),
+        ),
+        body: Column(
+          children: [
+            SizedBox(
+              height: 50,
+              child: ListView.builder(
+                scrollDirection: Axis.horizontal,
+                itemCount: ctrl.sellerCitys.length,
                 itemBuilder: (context, index){
-                  return SellerCard(
-                    name: ctrl.sellers[index].name ?? 'No name',
-                    largePrice: ctrl.sellers[index].largeprice ?? 00,
-                    location: ctrl.sellers[index].location ?? 'No name',
+                  return InkWell(
                     onTap: (){
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => const SellerDescriptionPage()),
-                      );
+                      ctrl.filterByCity(ctrl.sellerCitys[index].name ?? '');
                     },
+                    child: Padding(
+                      padding: const EdgeInsets.all(6),
+                      child: Chip(label: Text(ctrl.sellerCitys[index].name ?? 'Error')),
+                    ),
                   );
                 }),
-              )
-            ],
+            ),
+            
+              
+                DropDown(
+                  items: ['Low to High','High to Low'],
+                selectedItemText: 'Sort Price',
+                onSelected: (selected){
+                  ctrl.sortByPrice(ascending: selected == 'Low to High' ? true : false);
+                },
+                ),
+                
+                Expanded(
+                  child: GridView.builder(
+                    gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2,
+                     childAspectRatio: 1.5,
+                     crossAxisSpacing: 8,
+                     mainAxisSpacing: 8
+                  ), 
+                  itemCount: ctrl.sellerShowInUI.length,
+                  itemBuilder: (context, index){
+                    return SellerCard(
+                      name: ctrl.sellerShowInUI[index].name ?? 'No name',
+                      largePrice: ctrl.sellerShowInUI[index].largeprice ?? 00,
+                      location: ctrl.sellerShowInUI[index].location ?? 'No name',
+                      onTap: (){
+                       Get.to(SellerDescriptionPage(),arguments: {'data':ctrl.sellerShowInUI[index]});
+                      },
+                    );
+                  }),
+                )
+              ],
+            
           
-        
+        ),
       ),
     );
     }

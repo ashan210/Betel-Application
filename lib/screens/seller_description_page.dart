@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'package:get/get.dart';
+import 'package:my_first_app/model/seller/seller.dart';
 
 
 class SellerDescriptionPage extends StatelessWidget {
@@ -8,28 +10,32 @@ class SellerDescriptionPage extends StatelessWidget {
   
   @override
   Widget build(BuildContext context) {
+    Seller seller = Get.arguments['data'];
     return Scaffold(
       appBar: AppBar(
         title: const Text('Seller Details', style: TextStyle(fontWeight: FontWeight.bold)),
       ),
       body: SingleChildScrollView(
-        padding: const EdgeInsets.all(70.0),
+        padding: const EdgeInsets.fromLTRB(130, 50, 130, 130),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Text('Ashan Hapangama',
+            Text('Name;'),
+            Text(seller.name ?? '',
             style: const TextStyle(
               fontSize: 24,
               fontWeight: FontWeight.bold,
             ),
             ),
             const SizedBox(height: 20),
-            Text('Seller Description',
+            Text('Description;'),
+            Text(seller.description ?? '',
             style: TextStyle(fontSize: 16, height: 1.5),
             ),
             const SizedBox(height: 20),
+            Text('Contact Number;'),
             Text(
-              'Call: 0781851050',
+              '${seller.contactnumber ?? ''}',
               style: TextStyle(
                 fontSize: 20,
                 color: Colors.blue,
@@ -37,8 +43,9 @@ class SellerDescriptionPage extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 20),
+            Text('Large Betel Price;'),
             Text(
-              'Large Betel Price Rs: 7000',
+              'Rs: ${seller.largeprice ?? ''}',
               style: TextStyle(
                 fontSize: 20,
                 
@@ -46,8 +53,9 @@ class SellerDescriptionPage extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 20),
+            Text('Medium Betel Price;'),
             Text(
-              'Medium Betel Price Rs: 5000',
+              'Rs: ${seller.mediumprice ?? ''}',
               style: TextStyle(
                 fontSize: 20,
                 
@@ -55,8 +63,9 @@ class SellerDescriptionPage extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 20),
+            Text('Small Betel Price;'),
             Text(
-              'Small Betel Price Rs: 4000',
+              'Rs ${seller.smallprice ?? ''}',
               style: TextStyle(
                 fontSize: 20,
                 
@@ -64,8 +73,9 @@ class SellerDescriptionPage extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 20),
+            Text('Location;'),
             Text(
-              'Location: Putupagala',
+              seller.location ?? '',
               style: TextStyle(
                 fontSize: 20,
                 color: Colors.green,
