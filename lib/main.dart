@@ -3,7 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:my_first_app/controller/grower_sell_home_controller.dart';
 import 'package:my_first_app/controller/seller_hm_controller.dart';
-import 'package:my_first_app/screens/welcome_screen.dart';
+import 'package:my_first_app/screens/login_page.dart';
+import 'package:my_first_app/screens/register_page.dart';
+//import 'package:my_first_app/screens/welcome_screen.dart';
 import 'package:my_first_app/theme/theme.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'firebase_options.dart';
@@ -29,7 +31,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: lightMode,
-      home: const WelcomeScreen(),
+      home: const RegisterPage(),
     );
   }
 }
