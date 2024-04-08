@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:my_first_app/controller/login_controller.dart';
+import 'package:my_first_app/widgets/otp_txt_field.dart';
 
 
 class RegisterPage extends StatelessWidget {
@@ -6,6 +9,7 @@ class RegisterPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    return GetBuilder<LoginController>(builder: (ctrl){
     return Scaffold(
       body: Container(
         width: double.maxFinite,
@@ -27,6 +31,7 @@ class RegisterPage extends StatelessWidget {
             const SizedBox(height: 20),
             TextField(
               keyboardType: TextInputType.phone,
+              controller: ctrl.registerNameCtrl,
               decoration: InputDecoration(
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(12),
@@ -38,6 +43,7 @@ class RegisterPage extends StatelessWidget {
             ),
             const SizedBox(height: 20),
             TextField(
+              controller: ctrl.registerNumberCtrl,
               keyboardType: TextInputType.phone,
               decoration: InputDecoration(
                 border: OutlineInputBorder(
@@ -49,13 +55,27 @@ class RegisterPage extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 20),
+            OtpTextField(otpController: ctrl.otpController, 
+            visible: ctrl.otpFieldShown, 
+            onComplete: (otp) { 
+              ctrl.otpEnter = int.tryParse(otp ?? '0000');
+             },
+            ),
+            const SizedBox(height: 20),
             ElevatedButton(
-              onPressed: () {},
+              onPressed: () {
+                if(ctrl.otpFieldShown){
+                  ctrl.addUser();
+                }else{
+                  ctrl.sendOtp();
+                }
+                
+              },
               style: ElevatedButton.styleFrom(
                 foregroundColor: Colors.white,
                 backgroundColor: Colors.green,
               ),
-              child: Text('Register'),
+              child: Text( ctrl.otpFieldShown ? 'Register' : 'Send OTP'),
             ),
             TextButton(
               onPressed: () {
@@ -66,6 +86,9 @@ class RegisterPage extends StatelessWidget {
           ],
         ),
       ),
+      );
+    
+    }
     );
   }
 }
