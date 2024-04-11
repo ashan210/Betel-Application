@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:get_storage/get_storage.dart';
+import 'package:my_first_app/screens/login_page.dart';
 
 import 'package:my_first_app/screens/seller_home.dart';
+import 'package:my_first_app/screens/seller_home_sinhala.dart';
+import 'package:my_first_app/screens/seller_home_tamil.dart';
 
 
 
@@ -34,7 +38,11 @@ class HomeScreen extends StatelessWidget {
           style: TextStyle(fontWeight: FontWeight.w700 , fontSize: 25, color: Colors.white),
           ),
           actions: [
-            IconButton(onPressed: () {}, icon: const Icon(Icons.menu, color: Colors.white, size: 30,),
+            IconButton(onPressed: () {
+              GetStorage box = GetStorage();
+              box.erase();
+              Get.offAll(LoginPage());
+            }, icon: const Icon(Icons.logout, color: Colors.white, size: 30,),
             ),
           ],
         ),
@@ -45,16 +53,10 @@ class HomeScreen extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                   const Text(
-                    "WELCOME !!!",
-                  style: TextStyle(color: Colors.white,
-                   fontSize: 20,
-                    fontWeight: FontWeight.w600),
-                                   
-                 ),
+                   
 
                  const SizedBox(
-                height: 25,
+                height: 20,
                ),
 
                  //3buttons
@@ -73,7 +75,7 @@ class HomeScreen extends StatelessWidget {
                         BoxDecoration(borderRadius: BorderRadius.circular(13),
                         color: const Color.fromARGB(255, 2, 32, 1),
                         ),
-                        child: const Text("SELL",
+                        child: const Text("BUY",
                         style: TextStyle(color: Colors.white, 
                         fontSize: 18, 
                         fontWeight: FontWeight.w600),
@@ -133,27 +135,26 @@ class HomeScreen extends StatelessWidget {
                const SizedBox(
                   height: 10,
                 ),
-          
-                //AI section
-                
-                const Text("                     CHECK WITH AI",
-                textAlign: TextAlign.center,
-                style: TextStyle(color: Color.fromARGB(255, 169, 239, 166),
-                fontWeight: FontWeight.w800, fontSize: 20),
-                ),
 
-                const SizedBox(
-                  height: 10,
-                ),
+                Container(
+                height: 2,
+                width: 500,
+                decoration: const BoxDecoration(color: Color.fromARGB(255, 2, 32, 1)),
+              ),
 
-                 //AI lang buttons
-                Row(
+               const SizedBox(
+                height: 50,
+               ),
+
+               Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         GestureDetector(
-                          onTap: (){},
+                          onTap: (){
+                            Get.to(const SellerHomeSinhala());
+                          },
                           child: Container(
-                            padding:const EdgeInsets.all(5),
+                            padding:const EdgeInsets.all(10),
                             
                             
                             decoration: 
@@ -167,13 +168,15 @@ class HomeScreen extends StatelessWidget {
                             ),
                           ),
                         ),
-                        const SizedBox(width: 10),
+                        const SizedBox(width: 70),
                         
                         
                         GestureDetector(
-                          onTap: (){},
+                          onTap: (){
+                            Get.to(const SellerHomeTamil());
+                          },
                           child: Container(
-                            padding:const EdgeInsets.all(5),
+                            padding:const EdgeInsets.all(10),
                             
                             decoration: 
                             BoxDecoration(borderRadius: BorderRadius.circular(10),
@@ -186,13 +189,15 @@ class HomeScreen extends StatelessWidget {
                             ),
                           ),
                         ),
-                        const SizedBox(width: 10),
+                        const SizedBox(width: 70),
                         
                         
                         GestureDetector(
-                          onTap: (){},
+                          onTap: (){
+                           Get.to(const SellerHomeTamil());
+                          },
                           child: Container(
-                            padding:const EdgeInsets.all(5),
+                            padding:const EdgeInsets.all(10),
                             
                             decoration: 
                             BoxDecoration(borderRadius: BorderRadius.circular(10), 
@@ -208,9 +213,28 @@ class HomeScreen extends StatelessWidget {
                       ],
                      ),
 
-                     const SizedBox(
-                  height: 10,
+                
+
+          
+               const SizedBox(
+                  height: 70,
                 ),
+          
+                //AI section
+                
+                const Text("                     CHECK WITH AI",
+                textAlign: TextAlign.center,
+                style: TextStyle(color: Color.fromARGB(255, 169, 239, 166),
+                fontWeight: FontWeight.w800, fontSize: 20),
+                ),
+
+                const SizedBox(
+                  height: 20,
+                ),
+
+                
+
+            
 
                 //AI text
                 const Text("Betel cultivation faces significant challenges, primarily due to diseases like oil mark disease, which can swiftly devastate entire vineyards. Recognizing this threat is crucial, as oil mark disease is often indistinguishable from other ailments. With our app, simply snap a photo of any questionable betel leaf, and let our AI analyze it. Whether it's a healthy leaf or suffering from oil mark disease or other afflictions, our tool provides accurate identification, empowering farmers to take timely action and protect their crops",
@@ -242,7 +266,7 @@ class HomeScreen extends StatelessWidget {
                const SizedBox(height: 80,
                 ),
 
-                const Text("                              SELL",
+                const Text("                              BUY",
                 textAlign: TextAlign.center,
                 style: TextStyle(color: Color.fromARGB(255, 169, 239, 166),
                 fontWeight: FontWeight.w800, fontSize: 20),
@@ -250,73 +274,12 @@ class HomeScreen extends StatelessWidget {
 
                 
 
-                const SizedBox(
-                  height: 10,
-                ),
+                
 
-                Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        GestureDetector(
-                          onTap: (){},
-                          child: Container(
-                            padding:const EdgeInsets.all(5),
-                            
-                            
-                            decoration: 
-                            BoxDecoration(borderRadius: BorderRadius.circular(10),
-                            color: const Color.fromARGB(255, 2, 32, 1),
-                            ),
-                            child: const Text("SINHALA",
-                            style: TextStyle(color: Colors.white, 
-                            fontSize: 10, 
-                            fontWeight: FontWeight.w500),
-                            ),
-                          ),
-                        ),
-                        const SizedBox(width: 10),
-                        
-                        
-                        GestureDetector(
-                          onTap: (){},
-                          child: Container(
-                            padding:const EdgeInsets.all(5),
-                            
-                            decoration: 
-                            BoxDecoration(borderRadius: BorderRadius.circular(10),
-                            color: const Color.fromARGB(255, 2, 32, 1),
-                            ),
-                            child: const Text("TAMIL",
-                            style: TextStyle(color: Colors.white, 
-                            fontSize: 10, 
-                            fontWeight: FontWeight.w500),
-                            ),
-                          ),
-                        ),
-                        const SizedBox(width: 10),
-                        
-                        
-                        GestureDetector(
-                          onTap: (){},
-                          child: Container(
-                            padding:const EdgeInsets.all(5),
-                            
-                            decoration: 
-                            BoxDecoration(borderRadius: BorderRadius.circular(10), 
-                            color: const Color.fromARGB(255, 2, 32, 1),
-                            ),
-                            child: const Text("ENGLISH",
-                            style: TextStyle(color: Colors.white, 
-                            fontSize: 10, 
-                            fontWeight: FontWeight.w500),
-                            ),
-                          ),
-                        ),
-                      ],
-                     ),
+                
 
                      const SizedBox(
-                  height: 10,
+                  height: 20,
                 ),
 
                      const Text("Finding buyers who offer fair prices for your betel harvest can be challenging. To simplify this process, we've centralized all betel merchants in one convenient platform. Visit the 'Sell' section, select your area, and connect with local betel buyers. Maximize your profits by selling your betel harvest at competitive prices. Start today and streamline your selling experience with ease.",
@@ -362,77 +325,10 @@ class HomeScreen extends StatelessWidget {
                 
 
                 const SizedBox(
-                  height: 10,
+                  height: 20,
                 ),
 
-                //BID LANG BUTTONS
-                Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        GestureDetector(
-                          onTap: (){},
-                          child: Container(
-                            padding:const EdgeInsets.all(5),
-                            
-                            
-                            decoration: 
-                            BoxDecoration(borderRadius: BorderRadius.circular(10),
-                            color: const Color.fromARGB(255, 2, 32, 1),
-                            ),
-                            child: const Text("SINHALA",
-                            style: TextStyle(color: Colors.white, 
-                            fontSize: 10, 
-                            fontWeight: FontWeight.w500),
-                            ),
-                          ),
-                        ),
-                        const SizedBox(width: 10),
-
-                       
-                        
-                        
-                        GestureDetector(
-                          onTap: (){},
-                          child: Container(
-                            padding:const EdgeInsets.all(5),
-                            
-                            decoration: 
-                            BoxDecoration(borderRadius: BorderRadius.circular(10),
-                            color: const Color.fromARGB(255, 2, 32, 1),
-                            ),
-                            child: const Text("TAMIL",
-                            style: TextStyle(color: Colors.white, 
-                            fontSize: 10, 
-                            fontWeight: FontWeight.w500),
-                            ),
-                          ),
-                        ),
-                        const SizedBox(width: 10),
-                        
-                        
-                        GestureDetector(
-                          onTap: (){},
-                          child: Container(
-                            padding:const EdgeInsets.all(5),
-                            
-                            decoration: 
-                            BoxDecoration(borderRadius: BorderRadius.circular(10), 
-                            color: const Color.fromARGB(255, 2, 32, 1),
-                            ),
-                            child: const Text("ENGLISH",
-                            style: TextStyle(color: Colors.white, 
-                            fontSize: 10, 
-                            fontWeight: FontWeight.w500),
-                            ),
-                          ),
-                        ),
-                      ],
-                     ),
-
-                     const SizedBox(
-                  height: 10,
-                ),
-
+                
                 //BID long text
                 const Text("After utilizing the bid option and harvesting your crop, simply upload photos of your harvest. Betel merchants using our app will then submit their price offers for your crop. You have the flexibility to sell to the highest bidder, ensuring you get the best value for your harvest. Streamline your selling process and maximize your profits with ease.",
                 textAlign: TextAlign.center,
@@ -449,12 +345,9 @@ class HomeScreen extends StatelessWidget {
                     
                 ),
 
-
-              const SizedBox(
+                const SizedBox(
                   height: 80,
                 ),
-
-             //footer
 
              
              
@@ -463,9 +356,50 @@ class HomeScreen extends StatelessWidget {
                 width: 500,
                 decoration: const BoxDecoration(color: Color.fromARGB(255, 2, 32, 1)),
               ),
+
               const SizedBox(
-              height: 10,
+              height: 50,
              ),
+
+             Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    GestureDetector(
+                      onTap:() {
+                        
+                      },
+                      child: Container(
+                        padding:const EdgeInsets.all(15),
+                        
+                        decoration: 
+                        BoxDecoration(borderRadius: BorderRadius.circular(13),
+                        color: const Color.fromARGB(255, 2, 32, 1),
+                        ),
+                        child: const Text("About Betel Cultivation",
+                        style: TextStyle(color: Colors.white, 
+                        fontSize: 18, 
+                        fontWeight: FontWeight.w600),
+                        ),
+                      ),
+                    ),
+                  ],
+             ),
+
+                const SizedBox(
+              height: 50,
+             ),
+
+              Container(
+                height: 2,
+                width: 500,
+                decoration: const BoxDecoration(color: Color.fromARGB(255, 2, 32, 1)),
+              ),
+
+                const SizedBox(
+              height: 50,
+             ),
+
+               //footer
               const Text(
                 "MY BETEL APP",
                 style: TextStyle(color: Color.fromARGB(255, 169, 239, 166),
@@ -494,3 +428,7 @@ class HomeScreen extends StatelessWidget {
   }
 }
 
+
+
+
+              

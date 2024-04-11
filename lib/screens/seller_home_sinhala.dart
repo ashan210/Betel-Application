@@ -1,18 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
-import 'package:my_first_app/screens/grower_screen_sinhala.dart';
-import 'package:my_first_app/screens/grower_screen_tamil.dart';
-import 'package:my_first_app/screens/grower_sell_home.dart';
+import 'package:my_first_app/screens/home_screen.dart';
 import 'package:my_first_app/screens/login_page.dart';
 
+import 'package:my_first_app/screens/seller_home.dart';
+import 'package:my_first_app/screens/seller_home_tamil.dart';
 
 
 
 
-
-class GrowerScreen extends StatelessWidget {
-  const GrowerScreen({super.key});
+class SellerHomeSinhala extends StatelessWidget {
+  const SellerHomeSinhala({super.key});
 
   //@override
   //State<HomeScreen> createState() => _HomeScreenState();
@@ -29,7 +28,7 @@ class GrowerScreen extends StatelessWidget {
       //title: "betel app",
       
        //home: 
-      
+       
        return Scaffold(
          backgroundColor:const Color.fromARGB(255, 1, 86, 6),
         appBar: AppBar(
@@ -54,13 +53,7 @@ class GrowerScreen extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                   //const Text(
-                    //"WELCOME !!!",
-                  //style: TextStyle(color: Colors.white,
-                   //fontSize: 20,
-                    //fontWeight: FontWeight.w600),
-                                   
-                 //),
+                   
 
                  const SizedBox(
                 height: 20,
@@ -72,17 +65,17 @@ class GrowerScreen extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
                     GestureDetector(
-                      onTap:() {
-                        Get.to(const GrowerSellHome());
+                      onTap: (){
+                        Get.to(const SellerHome());
                       },
                       child: Container(
-                        padding:const EdgeInsets.all(15),
+                        padding:const EdgeInsets.all(15), 
                         
                         decoration: 
                         BoxDecoration(borderRadius: BorderRadius.circular(13),
                         color: const Color.fromARGB(255, 2, 32, 1),
                         ),
-                        child: const Text("SELL",
+                        child: const Text("BUY",
                         style: TextStyle(color: Colors.white, 
                         fontSize: 18, 
                         fontWeight: FontWeight.w600),
@@ -127,11 +120,9 @@ class GrowerScreen extends StatelessWidget {
                 
                  
           
-               
-
-                     const SizedBox(
-                  height: 10,
-                ),
+               const SizedBox(
+                height: 10,
+               ),
           
           //display image
                 Center(
@@ -140,11 +131,12 @@ class GrowerScreen extends StatelessWidget {
                   ),
                 ),
 
-                const SizedBox(
-                height: 10,
-               ),
+          
+               const SizedBox(
+                  height: 10,
+                ),
 
-               Container(
+                Container(
                 height: 2,
                 width: 500,
                 decoration: const BoxDecoration(color: Color.fromARGB(255, 2, 32, 1)),
@@ -159,7 +151,7 @@ class GrowerScreen extends StatelessWidget {
                       children: [
                         GestureDetector(
                           onTap: (){
-                            Get.to(const GrowerScreenSinhala());
+                            
                           },
                           child: Container(
                             padding:const EdgeInsets.all(10),
@@ -181,7 +173,7 @@ class GrowerScreen extends StatelessWidget {
                         
                         GestureDetector(
                           onTap: (){
-                            Get.to(const GrowerScreenTamil());
+                            Get.to(const SellerHomeTamil());
                           },
                           child: Container(
                             padding:const EdgeInsets.all(10),
@@ -202,7 +194,7 @@ class GrowerScreen extends StatelessWidget {
                         
                         GestureDetector(
                           onTap: (){
-                           
+                           Get.to(const HomeScreen());
                           },
                           child: Container(
                             padding:const EdgeInsets.all(10),
@@ -240,13 +232,12 @@ class GrowerScreen extends StatelessWidget {
                   height: 20,
                 ),
 
-                 
                 
 
-               
+            
 
                 //AI text
-                const Text("Betel cultivation faces significant challenges, primarily due to diseases like oil mark disease, which can swiftly devastate entire vineyards. Recognizing this threat is crucial, as oil mark disease is often indistinguishable from other ailments. With our app, simply snap a photo of any questionable betel leaf, and let our AI analyze it. Whether it's a healthy leaf or suffering from oil mark disease or other afflictions, our tool provides accurate identification, empowering farmers to take timely action and protect their crops",
+                const Text("බුලත් වගාව සැලකිය යුතු අභියෝගවලට මුහුණ දෙයි, මූලික වශයෙන් තෙල් සලකුණු රෝගය වැනි රෝග නිසා මුළු මිදි වතු ඉක්මනින් විනාශ කළ හැකිය. තෙල් සලකුණු රෝගය බොහෝ විට වෙනත් රෝගවලින් වෙන්කර හඳුනාගත නොහැකි බැවින් මෙම තර්ජනය හඳුනා ගැනීම ඉතා වැදගත් වේ. අපගේ යෙදුම සමඟ, ඕනෑම සැක සහිත බුලත් කොළයක ඡායාරූපයක් ගෙන, අපගේ AI හට එය විශ්ලේෂණය කිරීමට ඉඩ දෙන්න. එය සෞඛ්‍ය සම්පන්න පත්‍රයක් හෝ තෙල් සලකුණු රෝගයකින් හෝ වෙනත් පීඩාවකින් පීඩා විඳින්නේ නම්, අපගේ මෙවලම නිවැරදි හඳුනාගැනීමක් ලබා දෙයි, නියමිත වේලාවට පියවර ගැනීමට සහ ඔවුන්ගේ බෝග ආරක්ෂා කිරීමට ගොවීන් බල ගන්වයි.",
                 textAlign: TextAlign.center,
                 style: TextStyle(color: Colors.white,
                 fontWeight: FontWeight.w400, fontSize: 15),
@@ -275,7 +266,7 @@ class GrowerScreen extends StatelessWidget {
                const SizedBox(height: 80,
                 ),
 
-                const Text("                              SELL",
+                const Text("                              BUY",
                 textAlign: TextAlign.center,
                 style: TextStyle(color: Color.fromARGB(255, 169, 239, 166),
                 fontWeight: FontWeight.w800, fontSize: 20),
@@ -283,15 +274,15 @@ class GrowerScreen extends StatelessWidget {
 
                 
 
-                const SizedBox(
-                  height: 20,
-                ),
+                
 
                 
 
-               
+                     const SizedBox(
+                  height: 20,
+                ),
 
-                     const Text("Finding buyers who offer fair prices for your betel harvest can be challenging. To simplify this process, we've centralized all betel merchants in one convenient platform. Visit the 'Sell' section, select your area, and connect with local betel buyers. Maximize your profits by selling your betel harvest at competitive prices. Start today and streamline your selling experience with ease.",
+                     const Text("ඔබේ බුලත් අස්වැන්න සඳහා සාධාරණ මිලක් ලබා දෙන ගැනුම්කරුවන් සොයා ගැනීම අභියෝගාත්මක විය හැකිය. මෙම ක්‍රියාවලිය සරල කිරීම සඳහා, අපි සියලු බුලත් වෙළෙන්දන් එක් පහසු වේදිකාවක් තුළ මධ්‍යගත කර ඇත. 'විකුණන්න' කොටසට පැමිණ, ඔබේ ප්‍රදේශය තෝරා, දේශීය බුලත් ගැනුම්කරුවන් සමඟ සම්බන්ධ වන්න. ඔබේ බුලත් අස්වැන්න තරඟකාරී මිලට විකිණීමෙන් ඔබේ ලාභය උපරිම කර ගන්න. අදම ආරම්භ කර ඔබේ විකුණුම් අත්දැකීම පහසුවෙන් සරල කර ගන්න.",
                 textAlign: TextAlign.center,
                 style: TextStyle(color: Colors.white,
                 fontWeight: FontWeight.w400, fontSize: 15),
@@ -338,10 +329,8 @@ class GrowerScreen extends StatelessWidget {
                 ),
 
                 
-
-
                 //BID long text
-                const Text("After utilizing the bid option and harvesting your crop, simply upload photos of your harvest. Betel merchants using our app will then submit their price offers for your crop. You have the flexibility to sell to the highest bidder, ensuring you get the best value for your harvest. Streamline your selling process and maximize your profits with ease.",
+                const Text("ලංසු විකල්පය භාවිතා කර ඔබේ අස්වැන්න නෙලීමෙන් පසු, ඔබේ අස්වැන්නේ ඡායාරූප උඩුගත කරන්න. අපගේ යෙදුම භාවිතා කරන බුලත් වෙළෙන්දෝ ඔබේ බෝගය සඳහා ඔවුන්ගේ මිල දීමනා ඉදිරිපත් කරනු ඇත. ඔබේ අස්වැන්න සඳහා හොඳම වටිනාකම ඔබට ලැබෙන බව සහතික කරමින්, ඉහළම ලංසුකරුට විකිණීමට ඔබට නම්‍යශීලී බවක් ඇත. ඔබේ විකුණුම් ක්‍රියාවලිය විධිමත් කර පහසුවෙන් ඔබේ ලාභය උපරිම කර ගන්න.",
                 textAlign: TextAlign.center,
                 style: TextStyle(color: Colors.white,
                 fontWeight: FontWeight.w400, fontSize: 15),
@@ -356,8 +345,7 @@ class GrowerScreen extends StatelessWidget {
                     
                 ),
 
-
-              const SizedBox(
+                const SizedBox(
                   height: 80,
                 ),
 
@@ -440,3 +428,7 @@ class GrowerScreen extends StatelessWidget {
   }
 }
 
+
+
+
+              
