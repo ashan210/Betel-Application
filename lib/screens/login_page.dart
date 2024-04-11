@@ -1,10 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:my_first_app/controller/login_controller.dart';
+import 'package:my_first_app/screens/grower_screen.dart';
+import 'package:my_first_app/screens/home_screen.dart';
+import 'package:my_first_app/screens/register_page.dart';
 
 class LoginPage extends StatelessWidget {
   const LoginPage({super.key});
 
   @override
   Widget build(BuildContext context){
+    return GetBuilder<LoginController>(builder: (ctrl) {
     return Scaffold(
        body: Container(
         width: double.maxFinite,
@@ -25,6 +31,7 @@ class LoginPage extends StatelessWidget {
             ),
             const SizedBox(height: 20),
             TextField(
+              controller: ctrl.loginNumberCtrl,
               keyboardType: TextInputType.phone,
               decoration: InputDecoration(
                 border: OutlineInputBorder(
@@ -40,7 +47,10 @@ class LoginPage extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
                 ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    ctrl.loginWithPhone();
+                    Get.to(GrowerScreen());
+                  },
                   style: ElevatedButton.styleFrom(
                     foregroundColor: Colors.white,
                     backgroundColor: Colors.green,
@@ -49,7 +59,10 @@ class LoginPage extends StatelessWidget {
                 ),
             
             ElevatedButton(
-              onPressed: () {},
+              onPressed: () {
+                ctrl.loginWithPhone();
+                Get.to(HomeScreen());
+              },
               style: ElevatedButton.styleFrom(
                 foregroundColor: Colors.white,
                 backgroundColor: Colors.green,
@@ -60,12 +73,16 @@ class LoginPage extends StatelessWidget {
             ),
             const SizedBox(height: 20),
             TextButton(
-              onPressed: () {},
+              onPressed: () {
+                Get.to(RegisterPage());
+              },
               child: const Text('Register New Account'),
             ),
           ],
         ),
        ),
+    );
+    }
     );
   }
 }

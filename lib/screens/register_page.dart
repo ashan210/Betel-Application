@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:my_first_app/controller/login_controller.dart';
+import 'package:my_first_app/screens/login_page.dart';
 import 'package:my_first_app/widgets/otp_txt_field.dart';
 
 
@@ -79,7 +80,7 @@ class RegisterPage extends StatelessWidget {
             ),
             TextButton(
               onPressed: () {
-                
+                Get.to(const LoginPage());
               },
               child: const Text('Login'),
             ),
