@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:my_first_app/controller/login_controller.dart';
-import 'package:my_first_app/screens/grower_screen.dart';
-import 'package:my_first_app/screens/home_screen.dart';
+
 import 'package:my_first_app/screens/register_page.dart';
 
 class LoginPage extends StatelessWidget {
@@ -49,7 +48,7 @@ class LoginPage extends StatelessWidget {
                 ElevatedButton(
                   onPressed: () {
                     ctrl.loginWithPhone();
-                    Get.to(GrowerScreen());
+                    
                   },
                   style: ElevatedButton.styleFrom(
                     foregroundColor: Colors.white,
@@ -60,8 +59,8 @@ class LoginPage extends StatelessWidget {
             
             ElevatedButton(
               onPressed: () {
-                ctrl.loginWithPhone();
-                Get.to(HomeScreen());
+                ctrl.loginWithPhonetwo();
+                
               },
               style: ElevatedButton.styleFrom(
                 foregroundColor: Colors.white,

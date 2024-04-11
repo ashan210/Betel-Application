@@ -5,6 +5,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 import 'package:my_first_app/model/user/user.dart';
+import 'package:my_first_app/screens/grower_screen.dart';
+import 'package:my_first_app/screens/home_screen.dart';
 import 'package:otp_text_field_v2/otp_field_v2.dart';
 
 class LoginController extends GetxController{
@@ -97,6 +99,32 @@ Future<void> loginWithPhone() async {
         var userData = userDoc.data() as Map<String, dynamic>;
         box.write('loginUser', userData);
         loginNumberCtrl.clear();
+        Get.to(GrowerScreen());
+        Get.snackbar('Success', 'Login Successful', colorText: Colors.green);
+
+      } else {
+        Get.snackbar('Error', 'User not Found', colorText: Colors.red);
+      }
+    } else {
+      Get.snackbar('Error', 'Please enter a phone number', colorText: Colors.red);
+    }
+  } catch (error) {
+    print("Failed to login: $error");
+    Get.snackbar('Error', 'Failed to login', colorText: Colors.red);
+  }
+}
+
+Future<void> loginWithPhonetwo() async {
+  try {
+    String phoneNumber = loginNumberCtrl.text;
+    if (phoneNumber.isNotEmpty) {
+      var querySnapshot = await userCollection.where('number', isEqualTo: int.tryParse(phoneNumber)).limit(1).get();
+      if (querySnapshot.docs.isNotEmpty) {
+        var userDoc = querySnapshot.docs.first;
+        var userData = userDoc.data() as Map<String, dynamic>;
+        box.write('loginUser', userData);
+        loginNumberCtrl.clear();
+        Get.to(HomeScreen());
         Get.snackbar('Success', 'Login Successful', colorText: Colors.green);
 
       } else {
