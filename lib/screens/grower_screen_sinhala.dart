@@ -90,7 +90,9 @@ class GrowerScreenSinhala extends StatelessWidget {
                       ),
                     ),
                     GestureDetector(
-                      onTap: (){},
+                      onTap: (){
+                       
+                      },
                       child: Container(
                         padding:const EdgeInsets.all(15),
                         
