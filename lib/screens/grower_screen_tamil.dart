@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 import 'package:my_first_app/screens/ImageProcessingPage.dart';
-import 'package:my_first_app/screens/about_betel.dart';
+
+import 'package:my_first_app/screens/about_betel_tamil.dart';
 import 'package:my_first_app/screens/grower_screen.dart';
 import 'package:my_first_app/screens/grower_screen_sinhala.dart';
 import 'package:my_first_app/screens/grower_sell_home.dart';
@@ -380,7 +381,7 @@ class GrowerScreenTamil extends StatelessWidget {
                   children: [
                     GestureDetector(
                       onTap:() {
-                        Get.to( AboutBetel());
+                        Get.to( AboutBetelTamil());
                       },
                       child: Container(
                         padding:const EdgeInsets.all(15),

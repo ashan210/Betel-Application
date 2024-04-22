@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 import 'package:my_first_app/screens/ImageProcessingPage.dart';
-import 'package:my_first_app/screens/about_betel.dart';
+
+import 'package:my_first_app/screens/about_betel_sinhala.dart';
 import 'package:my_first_app/screens/home_screen.dart';
 import 'package:my_first_app/screens/login_page.dart';
 
@@ -370,7 +371,7 @@ class SellerHomeSinhala extends StatelessWidget {
                   children: [
                     GestureDetector(
                       onTap:() {
-                        Get.to( AboutBetel());
+                        Get.to( AboutBetelSinhala());
                       },
                       child: Container(
                         padding:const EdgeInsets.all(15),
