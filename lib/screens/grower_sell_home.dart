@@ -24,10 +24,11 @@ class GrowerSellHome extends StatelessWidget {
           shadowColor: Colors.white, 
           title: Text('Betel Sellers', style: TextStyle(fontWeight: FontWeight.w700, fontSize: 25, color: Colors.white),),
         ),
+        
         body: Column(
           children: [
             SizedBox(
-              height: 50,
+              height: 70,
               
               child: ListView.builder(
                 
@@ -60,7 +61,7 @@ class GrowerSellHome extends StatelessWidget {
                   ctrl.sortByPrice(ascending: selected == 'Low to High' ? true : false);
                 },
                 ),      
-                
+                SizedBox(height: 10),
                 Expanded(
                   child: GridView.builder(
                     gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2,

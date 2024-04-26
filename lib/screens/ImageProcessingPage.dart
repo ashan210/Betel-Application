@@ -64,8 +64,13 @@ class _ImageProcessingPageState extends State<ImageProcessingPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor:const Color.fromARGB(255, 1, 86, 6),
       appBar: AppBar(
-        title: Text('Check With AI'),
+        backgroundColor:const Color.fromARGB(255, 2, 32, 1),
+          shadowColor: Colors.white,
+        title: Text('Check With AI',
+        style: TextStyle(fontWeight: FontWeight.w700 , fontSize: 25, color: Colors.white),
+        ),
       ),
       body: Center(
         child: Column(
@@ -79,18 +84,30 @@ class _ImageProcessingPageState extends State<ImageProcessingPage> {
                 fit: BoxFit.cover,
               )
             else
-              Text('No image selected'),
+              Text('No image selected',
+              style: TextStyle(fontSize: 17, color: Colors.white),
+              ),
             SizedBox(height: 20),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 ElevatedButton(
                   onPressed: () => _pickImage(ImageSource.gallery),
-                  child: Text('Pick Image from Gallery'),
+                  style: ElevatedButton.styleFrom(
+        backgroundColor: Color.fromARGB(255, 2, 32, 1), // Change this color to the shade of green you prefer
+      ),
+                  child: Text('Pick Image from Gallery',
+                  style: TextStyle(fontSize: 17, color: Colors.white),
+                  ),
                 ),
                 ElevatedButton(
                   onPressed: () => _pickImage(ImageSource.camera),
-                  child: Text('Take a Picture'),
+                  style: ElevatedButton.styleFrom(
+        backgroundColor: Color.fromARGB(255, 2, 32, 1), // Change this color to the shade of green you prefer
+      ),
+                  child: Text('Take a Picture',
+                  style: TextStyle(fontSize: 17, color: Colors.white),
+                  ),
                 ),
               ],
             ),
@@ -101,7 +118,8 @@ class _ImageProcessingPageState extends State<ImageProcessingPage> {
                   label,
                   style: TextStyle(
                     fontSize: 28, // Adjust the text size as needed
-                    fontWeight: FontWeight.bold, // Make the text bold
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white, // Make the text bold
                   ),
                 )).toList(),
               ),

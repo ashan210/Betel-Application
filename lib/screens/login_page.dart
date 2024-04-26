@@ -8,80 +8,89 @@ class LoginPage extends StatelessWidget {
   const LoginPage({super.key});
 
   @override
-  Widget build(BuildContext context){
+  Widget build(BuildContext context) {
     return GetBuilder<LoginController>(builder: (ctrl) {
-    return Scaffold(
-       body: Container(
-        width: double.maxFinite,
-        padding: const EdgeInsets.all(20),
-        decoration: BoxDecoration(
-          color: Colors.blueGrey[50],
-        ),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            const Text(
-              'Welcome Back',
-              style: TextStyle(
-                fontSize: 28,
-                fontWeight: FontWeight.bold,
-                color: Colors.green,
-              ),
+      return Scaffold(
+        body: Container(
+          width: double.maxFinite,
+          decoration: BoxDecoration(
+            color: Colors.blueGrey[50]!.withOpacity(0.8),// Adjust transparency as needed
+            image: DecorationImage(
+              image: AssetImage("assets/bg3.png"), // Replace with your image path (inside assets folder)
+              fit: BoxFit.cover,
             ),
-            const SizedBox(height: 20),
-            TextField(
-              controller: ctrl.loginNumberCtrl,
-              keyboardType: TextInputType.phone,
-              decoration: InputDecoration(
-                border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(12),
+          ),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              const Text(
+                'Welcome Back',
+                style: TextStyle(
+                  fontSize: 38,
+                  fontWeight: FontWeight.bold,
+                  color:  Color.fromARGB(255, 2, 32, 1),
                 ),
-                prefixIcon: const Icon(Icons.phone_android),
-                labelText: 'Mobile Number',
-                hintText: 'Enter Your Mobile Number',
               ),
-            ),
-            const SizedBox(height: 20),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: [
-                ElevatedButton(
-                  onPressed: () {
-                    ctrl.loginWithPhone();
+              const SizedBox(height: 20),
+              TextField(
+                controller: ctrl.loginNumberCtrl,
+                keyboardType: TextInputType.phone,
+                decoration: InputDecoration(
+                  
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(12),
                     
-                  },
-                  style: ElevatedButton.styleFrom(
-                    foregroundColor: Colors.white,
-                    backgroundColor: Colors.green,
+                    
                   ),
-                  child: const Text('Grower Login'),
+                  prefixIcon: const Icon(Icons.phone_android),
+                  labelText: 'Mobile Number',
+                  labelStyle: TextStyle(fontSize: 17, fontWeight:FontWeight.w500),
+                  hintText: 'Enter Your Mobile Number',
                 ),
-            
-            ElevatedButton(
-              onPressed: () {
-                ctrl.loginWithPhonetwo();
-                
-              },
-              style: ElevatedButton.styleFrom(
-                foregroundColor: Colors.white,
-                backgroundColor: Colors.green,
               ),
-              child: const Text('Seller Login'),
-            ),
-              ],
-            ),
-            const SizedBox(height: 20),
-            TextButton(
-              onPressed: () {
-                Get.to(RegisterPage());
-              },
-              child: const Text('Register New Account'),
-            ),
-          ],
+              const SizedBox(height: 20),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: [
+                  ElevatedButton(
+                    onPressed: () {
+                      ctrl.loginWithPhone();
+                    },
+                    style: ElevatedButton.styleFrom(
+                      foregroundColor: Colors.white,
+                      backgroundColor: Color.fromARGB(255, 2, 32, 1),
+                    ),
+                    child: const Text('Grower Login',
+                    style: TextStyle(fontSize: 17),
+                    ),
+                  ),
+                  ElevatedButton(
+                    onPressed: () {
+                      ctrl.loginWithPhonetwo();
+                    },
+                    style: ElevatedButton.styleFrom(
+                      foregroundColor: Colors.white,
+                      backgroundColor: Color.fromARGB(255, 2, 32, 1),
+                    ),
+                    child: const Text('Seller Login',
+                    style: TextStyle(fontSize: 17),
+                    ),
+                  ),
+                ],
+              ),
+              const SizedBox(height: 20),
+              TextButton(
+                onPressed: () {
+                  Get.to(RegisterPage());
+                },
+                child: const Text('Register New Account',
+                style: TextStyle(fontSize: 20, color: Colors.blue),
+                ),
+              ),
+            ],
+          ),
         ),
-       ),
-    );
-    }
-    );
+      );
+    });
   }
 }
