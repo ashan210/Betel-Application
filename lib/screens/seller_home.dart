@@ -15,15 +15,24 @@ class SellerHome extends StatelessWidget {
      return GetBuilder<SellerHMController>(builder: (ctrl){
        
        return Scaffold(
-         backgroundColor: Colors.white,
-        appBar: AppBar(title:  Text('Betel Sellers'),),
+         backgroundColor:const Color.fromARGB(255, 1, 86, 6),
+        appBar: AppBar(
+          backgroundColor:const Color.fromARGB(255, 2, 32, 1),
+          shadowColor: Colors.white,
+          title:  Text('Betel Sellers',
+          style: TextStyle(fontWeight: FontWeight.w700 , fontSize: 25, color: Colors.white),
+          ),),
         body: ListView.builder(
           itemCount: ctrl.sellers.length,
           itemBuilder: (context,index){
-           return  ListTile(title:  Text(ctrl.sellers[index].name ?? ''),
-           subtitle:  Text((ctrl.sellers[index].largeprice ?? 0).toString()),
+           return  ListTile(title:  Text(ctrl.sellers[index].name ?? '',
+           style: TextStyle(color: Colors.white, fontSize: 18),
+           ),
+           subtitle:  Text((ctrl.sellers[index].largeprice ?? 0).toString(),
+           style: TextStyle(color: Colors.white),
+           ),
            trailing: IconButton(
-            icon: const Icon(Icons.delete),
+            icon: const Icon(Icons.business),
             onPressed: () {
               
               
@@ -36,6 +45,7 @@ class SellerHome extends StatelessWidget {
             onPressed: () {
              Get.to(const AddListing());
            },
+           backgroundColor: Color.fromARGB(255, 2, 32, 1),
            child: const Icon(Icons.add),),
        );
      }

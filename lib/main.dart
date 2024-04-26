@@ -5,7 +5,7 @@ import 'package:my_first_app/controller/grower_sell_home_controller.dart';
 import 'package:my_first_app/controller/login_controller.dart';
 import 'package:my_first_app/controller/seller_hm_controller.dart';
 import 'package:my_first_app/screens/login_page.dart';
-import 'package:my_first_app/screens/register_page.dart';
+//import 'package:my_first_app/screens/register_page.dart';
 //import 'package:my_first_app/screens/welcome_screen.dart';
 import 'package:my_first_app/theme/theme.dart';
 import 'package:firebase_core/firebase_core.dart';

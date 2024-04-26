@@ -19,6 +19,7 @@ class SellerCard extends StatelessWidget {
       },
       child: Card(
         elevation: 2,
+        color:  Color.fromARGB(255, 2, 32, 1),
         child: Padding(
           padding: const EdgeInsets.all(8.0),
           child: Column(
@@ -26,12 +27,12 @@ class SellerCard extends StatelessWidget {
             children: [
               SizedBox(height: 9),
               Text(name,
-              style: TextStyle(fontSize: 16),
+              style: TextStyle(color: Colors.white, fontSize: 16),
               overflow: TextOverflow.ellipsis,
               ),
               SizedBox(height: 9),
               Text('Rs : $largePrice',
-              style: TextStyle(fontSize: 16),
+              style: TextStyle(color: Colors.white, fontSize: 16),
               overflow: TextOverflow.ellipsis,
               ),
               SizedBox(height: 9),
@@ -51,6 +52,7 @@ class SellerCard extends StatelessWidget {
           ),
         ),
       ),
+      
     );
   }
 }
