@@ -15,6 +15,12 @@ class AddListing extends StatelessWidget {
       appBar: AppBar(
         backgroundColor:const Color.fromARGB(255, 2, 32, 1),
           shadowColor: Colors.white,
+          centerTitle: true,
+          leading: IconButton(
+            icon: Icon(Icons.arrow_back),
+            color: Colors.white,
+            onPressed: () => Navigator.of(context).pop(),
+          ),
         title: const Text('Add Listing',
         style: TextStyle(fontWeight: FontWeight.w700 , fontSize: 25, color: Colors.white),
         ),),

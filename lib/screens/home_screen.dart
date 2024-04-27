@@ -36,6 +36,7 @@ class HomeScreen extends StatelessWidget {
         appBar: AppBar(
           backgroundColor:const Color.fromARGB(255, 2, 32, 1),
           shadowColor: Colors.white,
+          centerTitle: true,
           title:const Text("MY BETEL APP" ,
           style: TextStyle(fontWeight: FontWeight.w700 , fontSize: 25, color: Colors.white),
           ),

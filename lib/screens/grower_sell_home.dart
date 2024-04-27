@@ -21,7 +21,13 @@ class GrowerSellHome extends StatelessWidget {
         backgroundColor:const Color.fromARGB(255, 1, 86, 6),
         appBar: AppBar(
           backgroundColor:const Color.fromARGB(255, 2, 32, 1),
-          shadowColor: Colors.white, 
+          shadowColor: Colors.white,
+          centerTitle: true,
+          leading: IconButton(
+            icon: Icon(Icons.arrow_back),
+            color: Colors.white,
+            onPressed: () => Navigator.of(context).pop(),
+          ), 
           title: Text('Betel Sellers', style: TextStyle(fontWeight: FontWeight.w700, fontSize: 25, color: Colors.white),),
         ),
         
