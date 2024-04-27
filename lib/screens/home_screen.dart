@@ -68,28 +68,11 @@ class HomeScreen extends StatelessWidget {
                   children: [
                     GestureDetector(
                       onTap: (){
-                        Get.to(const SellerHome());
+                        Get.to( ImageProcessingPage());
+                        
                       },
                       child: Container(
                         padding:const EdgeInsets.all(15), 
-                        
-                        decoration: 
-                        BoxDecoration(borderRadius: BorderRadius.circular(13),
-                        color: const Color.fromARGB(255, 2, 32, 1),
-                        ),
-                        child: const Text("BUY",
-                        style: TextStyle(color: Colors.white, 
-                        fontSize: 18, 
-                        fontWeight: FontWeight.w600),
-                        ),
-                      ),
-                    ),
-                    GestureDetector(
-                      onTap: (){
-                        Get.to( ImageProcessingPage());
-                      },
-                      child: Container(
-                        padding:const EdgeInsets.all(15),
                         
                         decoration: 
                         BoxDecoration(borderRadius: BorderRadius.circular(13),
@@ -103,21 +86,24 @@ class HomeScreen extends StatelessWidget {
                       ),
                     ),
                     GestureDetector(
-                      onTap: (){},
+                      onTap: (){
+                        Get.to(const SellerHome());
+                      },
                       child: Container(
                         padding:const EdgeInsets.all(15),
                         
                         decoration: 
-                        BoxDecoration(borderRadius: BorderRadius.circular(13), 
+                        BoxDecoration(borderRadius: BorderRadius.circular(13),
                         color: const Color.fromARGB(255, 2, 32, 1),
                         ),
-                        child: const Text(" BID ",
+                        child: const Text(" ADD LISTING ",
                         style: TextStyle(color: Colors.white, 
                         fontSize: 18, 
                         fontWeight: FontWeight.w600),
                         ),
                       ),
                     ),
+                    
                   ],
                  ),
                  
@@ -270,7 +256,7 @@ class HomeScreen extends StatelessWidget {
                const SizedBox(height: 80,
                 ),
 
-                const Text("                              BUY",
+                const Text("                         ADD LISTING",
                 textAlign: TextAlign.center,
                 style: TextStyle(color: Color.fromARGB(255, 169, 239, 166),
                 fontWeight: FontWeight.w800, fontSize: 20),
@@ -305,54 +291,13 @@ class HomeScreen extends StatelessWidget {
                 ),
 
                 const SizedBox(
-                  height: 70,
+                  height: 50,
                 ),
 
                 //bid section
-              Container(
-                height: 2,
-                width: 500,
-                decoration: const BoxDecoration(color: Color.fromARGB(255, 2, 32, 1)),
-              ),
-
-              const SizedBox(
-                  height: 80,
-                ),
-
-                //BID text
-                const Text("                               BID",
-                textAlign: TextAlign.center,
-                style: TextStyle(color: Color.fromARGB(255, 169, 239, 166),
-                fontWeight: FontWeight.w800, fontSize: 20),
-                ),
+              
 
                 
-
-                const SizedBox(
-                  height: 20,
-                ),
-
-                
-                //BID long text
-                const Text("After utilizing the bid option and harvesting your crop, simply upload photos of your harvest. Betel merchants using our app will then submit their price offers for your crop. You have the flexibility to sell to the highest bidder, ensuring you get the best value for your harvest. Streamline your selling process and maximize your profits with ease.",
-                textAlign: TextAlign.center,
-                style: TextStyle(color: Colors.white,
-                fontWeight: FontWeight.w400, fontSize: 15),
-                ),
-
-                //BID img
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                    children: [Image.asset("assets/BETEL12.png", height: 140,width: 220, scale: 1,),
-                    
-                    ],
-                    
-                ),
-
-                const SizedBox(
-                  height: 80,
-                ),
-
              
              
               Container(

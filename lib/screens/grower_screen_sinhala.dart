@@ -76,25 +76,7 @@ class GrowerScreenSinhala extends StatelessWidget {
                   children: [
                     GestureDetector(
                       onTap:() {
-                        Get.to(const GrowerSellHome());
-                      },
-                      child: Container(
-                        padding:const EdgeInsets.all(15),
-                        
-                        decoration: 
-                        BoxDecoration(borderRadius: BorderRadius.circular(13),
-                        color: const Color.fromARGB(255, 2, 32, 1),
-                        ),
-                        child: const Text("SELL",
-                        style: TextStyle(color: Colors.white, 
-                        fontSize: 18, 
-                        fontWeight: FontWeight.w600),
-                        ),
-                      ),
-                    ),
-                    GestureDetector(
-                      onTap: (){
-                       Get.to( ImageProcessingPage());
+                        Get.to( ImageProcessingPage());
                       },
                       child: Container(
                         padding:const EdgeInsets.all(15),
@@ -111,21 +93,24 @@ class GrowerScreenSinhala extends StatelessWidget {
                       ),
                     ),
                     GestureDetector(
-                      onTap: (){},
+                      onTap: (){
+                       Get.to(const GrowerSellHome());
+                      },
                       child: Container(
                         padding:const EdgeInsets.all(15),
                         
                         decoration: 
-                        BoxDecoration(borderRadius: BorderRadius.circular(13), 
+                        BoxDecoration(borderRadius: BorderRadius.circular(13),
                         color: const Color.fromARGB(255, 2, 32, 1),
                         ),
-                        child: const Text(" BID ",
+                        child: const Text("BETEL SELLERS",
                         style: TextStyle(color: Colors.white, 
                         fontSize: 18, 
                         fontWeight: FontWeight.w600),
                         ),
                       ),
                     ),
+                    
                   ],
                  ),
                  
@@ -278,7 +263,7 @@ class GrowerScreenSinhala extends StatelessWidget {
                const SizedBox(height: 80,
                 ),
 
-                const Text("                              SELL",
+                const Text("                       BETEL SELLERS",
                 textAlign: TextAlign.center,
                 style: TextStyle(color: Color.fromARGB(255, 169, 239, 166),
                 fontWeight: FontWeight.w800, fontSize: 20),
@@ -313,58 +298,10 @@ class GrowerScreenSinhala extends StatelessWidget {
                 ),
 
                 const SizedBox(
-                  height: 70,
+                  height: 50,
                 ),
 
-                //bid section
-              Container(
-                height: 2,
-                width: 500,
-                decoration: const BoxDecoration(color: Color.fromARGB(255, 2, 32, 1)),
-              ),
-
-              const SizedBox(
-                  height: 80,
-                ),
-
-                //BID text
-                const Text("                               BID",
-                textAlign: TextAlign.center,
-                style: TextStyle(color: Color.fromARGB(255, 169, 239, 166),
-                fontWeight: FontWeight.w800, fontSize: 20),
-                ),
-
-                
-
-                const SizedBox(
-                  height: 20,
-                ),
-
-                
-
-
-                //BID long text
-                const Text("ලංසු විකල්පය භාවිතා කර ඔබේ අස්වැන්න නෙලීමෙන් පසු, ඔබේ අස්වැන්නේ ඡායාරූප උඩුගත කරන්න. අපගේ යෙදුම භාවිතා කරන බුලත් වෙළෙන්දෝ ඔබේ බෝගය සඳහා ඔවුන්ගේ මිල දීමනා ඉදිරිපත් කරනු ඇත. ඔබේ අස්වැන්න සඳහා හොඳම වටිනාකම ඔබට ලැබෙන බව සහතික කරමින්, ඉහළම ලංසුකරුට විකිණීමට ඔබට නම්‍යශීලී බවක් ඇත. ඔබේ විකුණුම් ක්‍රියාවලිය විධිමත් කර පහසුවෙන් ඔබේ ලාභය උපරිම කර ගන්න.",
-                textAlign: TextAlign.center,
-                style: TextStyle(color: Colors.white,
-                fontWeight: FontWeight.w400, fontSize: 15),
-                ),
-
-                //BID img
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                    children: [Image.asset("assets/BETEL12.png", height: 140,width: 220, scale: 1,),
-                    
-                    ],
-                    
-                ),
-
-
-              const SizedBox(
-                  height: 80,
-                ),
-
-             
+               
              
               Container(
                 height: 2,

@@ -84,7 +84,7 @@ class LoginPage extends StatelessWidget {
                   Get.to(RegisterPage());
                 },
                 child: const Text('Register New Account',
-                style: TextStyle(fontSize: 20, color: Colors.blue),
+                style: TextStyle(fontSize: 20, color: Color.fromARGB(255, 1, 86, 6), fontWeight: FontWeight.w800),
                 ),
               ),
             ],

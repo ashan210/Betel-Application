@@ -14,9 +14,12 @@ class RegisterPage extends StatelessWidget {
     return Scaffold(
       body: Container(
         width: double.maxFinite,
-        padding: const EdgeInsets.all(20),
         decoration: BoxDecoration(
-          color: Colors.blueGrey[50],
+          color: Colors.blueGrey[50]!.withOpacity(0.8),
+          image: DecorationImage(
+            image: AssetImage("assets/bg3.png"),
+            fit: BoxFit.cover,
+            ),
         ),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -24,10 +27,10 @@ class RegisterPage extends StatelessWidget {
             const Text(
               'Create Your Account !!',
               style: TextStyle(
-                fontSize: 28,
-                fontWeight: FontWeight.bold,
-                color: Colors.green,
-              ),
+                  fontSize: 34,
+                  fontWeight: FontWeight.bold,
+                  color:  Color.fromARGB(255, 2, 32, 1),
+                ),
             ),
             const SizedBox(height: 20),
             TextField(
@@ -39,6 +42,7 @@ class RegisterPage extends StatelessWidget {
                 ),
                 prefixIcon: const Icon(Icons.phone_android),
                 labelText: 'Your Name',
+                labelStyle: TextStyle(fontSize: 17, fontWeight:FontWeight.w500),
                 hintText: 'Enter Your Name',
               ),
             ),
@@ -52,6 +56,7 @@ class RegisterPage extends StatelessWidget {
                 ),
                 prefixIcon: const Icon(Icons.phone_android),
                 labelText: 'Mobile Number',
+                labelStyle: TextStyle(fontSize: 17, fontWeight:FontWeight.w500),
                 hintText: 'Enter Your Mobile Number',
               ),
             ),
@@ -74,15 +79,19 @@ class RegisterPage extends StatelessWidget {
               },
               style: ElevatedButton.styleFrom(
                 foregroundColor: Colors.white,
-                backgroundColor: Colors.green,
+                backgroundColor: Color.fromARGB(255, 2, 32, 1),
               ),
-              child: Text( ctrl.otpFieldShown ? 'Register' : 'Send OTP'),
+              child: Text( ctrl.otpFieldShown ? 'Register' : 'Send OTP',
+              style: TextStyle(fontSize: 17),
+              ),
             ),
             TextButton(
               onPressed: () {
                 Get.to(const LoginPage());
               },
-              child: const Text('Login'),
+              child: const Text('Login',
+              style: TextStyle(fontSize: 20, color: Color.fromARGB(255, 1, 86, 6), fontWeight: FontWeight.w800),
+              ),
             ),
           ],
         ),

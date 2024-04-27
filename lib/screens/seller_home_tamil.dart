@@ -69,28 +69,10 @@ class SellerHomeTamil extends StatelessWidget {
                   children: [
                     GestureDetector(
                       onTap: (){
-                        Get.to(const SellerHome());
-                      },
-                      child: Container(
-                        padding:const EdgeInsets.all(15), 
-                        
-                        decoration: 
-                        BoxDecoration(borderRadius: BorderRadius.circular(13),
-                        color: const Color.fromARGB(255, 2, 32, 1),
-                        ),
-                        child: const Text("BUY",
-                        style: TextStyle(color: Colors.white, 
-                        fontSize: 18, 
-                        fontWeight: FontWeight.w600),
-                        ),
-                      ),
-                    ),
-                    GestureDetector(
-                      onTap: (){
                         Get.to( ImageProcessingPage());
                       },
                       child: Container(
-                        padding:const EdgeInsets.all(15),
+                        padding:const EdgeInsets.all(15), 
                         
                         decoration: 
                         BoxDecoration(borderRadius: BorderRadius.circular(13),
@@ -104,21 +86,24 @@ class SellerHomeTamil extends StatelessWidget {
                       ),
                     ),
                     GestureDetector(
-                      onTap: (){},
+                      onTap: (){
+                        Get.to(const SellerHome());
+                      },
                       child: Container(
                         padding:const EdgeInsets.all(15),
                         
                         decoration: 
-                        BoxDecoration(borderRadius: BorderRadius.circular(13), 
+                        BoxDecoration(borderRadius: BorderRadius.circular(13),
                         color: const Color.fromARGB(255, 2, 32, 1),
                         ),
-                        child: const Text(" BID ",
+                        child: const Text(" ADD LISTING ",
                         style: TextStyle(color: Colors.white, 
                         fontSize: 18, 
                         fontWeight: FontWeight.w600),
                         ),
                       ),
                     ),
+                    
                   ],
                  ),
                  
@@ -271,7 +256,7 @@ class SellerHomeTamil extends StatelessWidget {
                const SizedBox(height: 80,
                 ),
 
-                const Text("                              BUY",
+                const Text("                         ADD LISTING",
                 textAlign: TextAlign.center,
                 style: TextStyle(color: Color.fromARGB(255, 169, 239, 166),
                 fontWeight: FontWeight.w800, fontSize: 20),
@@ -305,53 +290,13 @@ class SellerHomeTamil extends StatelessWidget {
                     
                 ),
 
-                const SizedBox(
-                  height: 70,
-                ),
+                
 
-                //bid section
-              Container(
-                height: 2,
-                width: 500,
-                decoration: const BoxDecoration(color: Color.fromARGB(255, 2, 32, 1)),
-              ),
-
-              const SizedBox(
-                  height: 80,
-                ),
-
-                //BID text
-                const Text("                               BID",
-                textAlign: TextAlign.center,
-                style: TextStyle(color: Color.fromARGB(255, 169, 239, 166),
-                fontWeight: FontWeight.w800, fontSize: 20),
-                ),
-
+              
                 
 
                 const SizedBox(
-                  height: 20,
-                ),
-
-                
-                //BID long text
-                const Text("ஏல விருப்பத்தைப் பயன்படுத்தி, உங்கள் பயிரை அறுவடை செய்த பிறகு, உங்கள் அறுவடையின் புகைப்படங்களைப் பதிவேற்றவும். எங்கள் பயன்பாட்டைப் பயன்படுத்தும் வெற்றிலை வியாபாரிகள் உங்கள் பயிருக்கு விலை சலுகைகளைச் சமர்ப்பிப்பார்கள். உங்கள் அறுவடைக்கு சிறந்த மதிப்பைப் பெறுவதை உறுதிசெய்து, அதிக ஏலதாரருக்கு விற்க உங்களுக்கு நெகிழ்வுத் தன்மை உள்ளது. உங்கள் விற்பனை செயல்முறையை சீரமைத்து, உங்கள் லாபத்தை எளிதாக அதிகரிக்கவும்.",
-                textAlign: TextAlign.center,
-                style: TextStyle(color: Colors.white,
-                fontWeight: FontWeight.w400, fontSize: 15),
-                ),
-
-                //BID img
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                    children: [Image.asset("assets/BETEL12.png", height: 140,width: 220, scale: 1,),
-                    
-                    ],
-                    
-                ),
-
-                const SizedBox(
-                  height: 80,
+                  height: 50,
                 ),
 
              
