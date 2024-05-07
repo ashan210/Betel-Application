@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:my_first_app/controller/login_controller.dart';
-import 'package:my_first_app/screens/grower_or_seller.dart';
 
 import 'package:my_first_app/screens/register_page.dart';
 
-class LoginPage extends StatelessWidget {
-  const LoginPage({super.key});
+class GrowerORSellerPage extends StatelessWidget {
+  const GrowerORSellerPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -25,69 +24,54 @@ class LoginPage extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               const Text(
-                'Welcome Back',
+                'Are You a',
                 style: TextStyle(
                   fontSize: 38,
                   fontWeight: FontWeight.bold,
                   color:  Color.fromARGB(255, 2, 32, 1),
                 ),
               ),
-              const SizedBox(height: 20),
-              TextField(
-                controller: ctrl.loginNumberCtrl,
-                keyboardType: TextInputType.phone,
-                decoration: InputDecoration(
-                  
-                  border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(12),
-                    
-                    
-                  ),
-                  prefixIcon: const Icon(Icons.phone_android),
-                  labelText: 'Mobile Number',
-                  labelStyle: TextStyle(fontSize: 17, fontWeight:FontWeight.w500),
-                  hintText: 'Enter Your Mobile Number',
-                ),
-              ),
+              
+              
               const SizedBox(height: 20),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
                   ElevatedButton(
                     onPressed: () {
-                      ctrl.loginWithPhone();
+                      Get.to(RegisterPage());
                     },
                     style: ElevatedButton.styleFrom(
                       foregroundColor: Colors.white,
                       backgroundColor: Color.fromARGB(255, 2, 32, 1),
                     ),
-                    child: const Text('Grower Login',
+                    child: const Text('Betel Grower',
                     style: TextStyle(fontSize: 17),
                     ),
                   ),
+                  Text("OR",
+                        style: TextStyle(color: Colors.black, 
+                        fontSize: 18, 
+                        fontWeight: FontWeight.w600),
+                        ),
                   ElevatedButton(
                     onPressed: () {
-                      ctrl.loginWithPhonetwo();
+                      Get.to(RegisterPage());
                     },
                     style: ElevatedButton.styleFrom(
                       foregroundColor: Colors.white,
                       backgroundColor: Color.fromARGB(255, 2, 32, 1),
                     ),
-                    child: const Text('Seller Login',
+                    child: const Text('Betel Seller',
                     style: TextStyle(fontSize: 17),
                     ),
                   ),
                 ],
               ),
               const SizedBox(height: 20),
-              TextButton(
-                onPressed: () {
-                  Get.to(GrowerORSellerPage());
-                },
-                child: const Text('Register New Account',
+                Text('(Select Your Profession)',
                 style: TextStyle(fontSize: 20, color: Color.fromARGB(255, 1, 86, 6), fontWeight: FontWeight.w800),
                 ),
-              ),
             ],
           ),
         ),

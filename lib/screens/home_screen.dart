@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 import 'package:my_first_app/screens/ImageProcessingPage.dart';
@@ -37,8 +38,8 @@ class HomeScreen extends StatelessWidget {
           backgroundColor:const Color.fromARGB(255, 2, 32, 1),
           shadowColor: Colors.white,
           centerTitle: true,
-          title:const Text("MY BETEL APP" ,
-          style: TextStyle(fontWeight: FontWeight.w700 , fontSize: 25, color: Colors.white),
+          title:const Text("Betel Guardian" ,
+          style: TextStyle(fontWeight: FontWeight.w700 , fontSize: 30, color: Colors.white),
           ),
           actions: [
             IconButton(onPressed: () {
@@ -349,24 +350,15 @@ class HomeScreen extends StatelessWidget {
               height: 50,
              ),
 
-               //footer
-              const Text(
-                "MY BETEL APP",
-                style: TextStyle(color: Color.fromARGB(255, 169, 239, 166),
-                fontSize: 20,
-                fontWeight: FontWeight.w800),
-                ),
-              
-               const SizedBox(
-                height: 5,
-               ),
-
-                const Text(
-                  "the final copy is available. It is also used to temporarily replace text in a process called greeking, which allows designers to consider the form of a webpage or publicatin publishing and graphic design, Lorem ipsum is a placeholder text commonl",
-                  style: TextStyle(color: Colors.white,
-                  fontSize: 10,
-                  fontWeight: FontWeight.w300),
-                ),
+               
+                      Text(
+                          "Developed by Ashan Hapangama",
+                          style: TextStyle(color: Colors.white,
+                          fontSize: 10,
+                          fontWeight: FontWeight.w300),
+                        
+                                             ),
+                      
 
               ],
               
@@ -377,8 +369,3 @@ class HomeScreen extends StatelessWidget {
     
   }
 }
-
-
-
-
-              
