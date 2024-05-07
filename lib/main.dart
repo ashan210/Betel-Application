@@ -4,6 +4,7 @@ import 'package:get/get.dart';
 import 'package:my_first_app/controller/grower_sell_home_controller.dart';
 import 'package:my_first_app/controller/login_controller.dart';
 import 'package:my_first_app/controller/seller_hm_controller.dart';
+import 'package:my_first_app/screens/home_screen.dart';
 import 'package:my_first_app/screens/login_page.dart';
 //import 'package:my_first_app/screens/register_page.dart';
 //import 'package:my_first_app/screens/welcome_screen.dart';
@@ -33,7 +34,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: lightMode,
-      home: const LoginPage(),
+      home: const LoginPage(),  
     );
   }
 }

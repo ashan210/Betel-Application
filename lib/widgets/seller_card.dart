@@ -44,7 +44,7 @@ class SellerCard extends StatelessWidget {
                 ),
                 child: Text(
                   location,
-                  style: const TextStyle(color: Colors.white, fontSize: 16),
+                  style: const TextStyle(color: Colors.black, fontSize: 16, fontWeight: FontWeight.bold),
                 ),
               ),
              

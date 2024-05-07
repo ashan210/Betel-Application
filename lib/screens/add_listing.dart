@@ -35,6 +35,7 @@ class AddListing extends StatelessWidget {
               SizedBox(height: 10,),
               TextField(
                 controller: ctrl.sellerNameCtrl,
+                style: TextStyle(color: Colors.white),
                 decoration: InputDecoration(
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(10)
@@ -43,12 +44,13 @@ class AddListing extends StatelessWidget {
                   style: TextStyle(color: Colors.white,),
                   ),
                   hintText: 'Enter Your Name',
-                  
+                  hintStyle: TextStyle(color: Colors.white,),
                 ),
               ),
               const SizedBox(height: 10),
               TextField(
                 controller: ctrl.sellerDescriptionCtrl,
+                style: TextStyle(color: Colors.white),
                 decoration: InputDecoration(
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(10)
@@ -56,13 +58,15 @@ class AddListing extends StatelessWidget {
                   label: const Text('Listing Description',
                   style: TextStyle(color: Colors.white,),
                   ),
-                  hintText: 'Enter Specific Information About Your Purchase'
+                  hintText: 'Enter Specific Information About Your Purchase',
+                  hintStyle: TextStyle(color: Colors.white,),
                ),
                 maxLines: 4,
               ),
               const SizedBox(height: 10),
               TextField(
                 controller: ctrl.sellerLocation,
+                style: TextStyle(color: Colors.white),
                 decoration: InputDecoration(
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(10)
@@ -70,12 +74,15 @@ class AddListing extends StatelessWidget {
                   label: const Text('Location',
                   style: TextStyle(color: Colors.white,),
                   ),
-                  hintText: 'Provide The Location Where You Make Purchases'
+                  hintText: 'Provide The Location Where You Make Purchases',
+                  hintStyle: TextStyle(color: Colors.white,),
                 ),
               ),
               const SizedBox(height: 10),
               TextField(
-                controller: ctrl.sellerContactNumber,
+                controller: ctrl.sellerContactNumberTwo,
+                style: TextStyle(color: Colors.white),
+                keyboardType: TextInputType.number,
                 decoration: InputDecoration(
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(10)
@@ -83,12 +90,15 @@ class AddListing extends StatelessWidget {
                   label: const Text('Contact Number',
                   style: TextStyle(color: Colors.white,),
                   ),
-                  hintText: 'Add your Contact Number'
+                  hintText: 'Add your Contact Number',
+                  hintStyle: TextStyle(color: Colors.white,),
                 ),
               ),
               const SizedBox(height: 10),
               TextField(
                 controller: ctrl.sellerLargePrice,
+                style: TextStyle(color: Colors.white),
+                keyboardType: TextInputType.number,
                 decoration: InputDecoration(
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(10)
@@ -96,12 +106,15 @@ class AddListing extends StatelessWidget {
                   label: const Text('Large Price',
                   style: TextStyle(color: Colors.white,),
                   ),
-                  hintText: 'Price Of Buying 1000 LARGE Size Betel Leaves'
+                  hintText: 'Price Of Buying 1000 LARGE Size Betel Leaves',
+                  hintStyle: TextStyle(color: Colors.white,),
                 ),
               ),
               const SizedBox(height: 10),
               TextField(
                 controller: ctrl.sellerMediumPrice,
+                style: TextStyle(color: Colors.white),
+                keyboardType: TextInputType.number,
                 decoration: InputDecoration(
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(10)
@@ -109,12 +122,15 @@ class AddListing extends StatelessWidget {
                   label: const Text('Medium Price',
                   style: TextStyle(color: Colors.white,),
                   ),
-                  hintText: 'Price Of Buying 1000 MEDIUM Size Betel Leaves'
+                  hintText: 'Price Of Buying 1000 MEDIUM Size Betel Leaves',
+                  hintStyle: TextStyle(color: Colors.white,),
                 ),
               ),
               const SizedBox(height: 10),
               TextField(
                 controller: ctrl.sellerSmallPrice,
+                style: TextStyle(color: Colors.white),
+                keyboardType: TextInputType.number,
                 decoration: InputDecoration(
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(10)
@@ -122,21 +138,23 @@ class AddListing extends StatelessWidget {
                   label: const Text('Small Price',
                   style: TextStyle(color: Colors.white,),
                   ),
-                  hintText: 'Price Of Buying 1000 SMALL Size Betel Leaves'
+                  hintText: 'Price Of Buying 1000 SMALL Size Betel Leaves',
+                  hintStyle: TextStyle(color: Colors.white,),
                 ),
               ),
               const SizedBox(height: 10),
               const Text('Enter The Nearest City',
               style: TextStyle(color: Colors.white, fontSize: 17),
               ),
-             DropDown(items: const ['Dompe','Pugoda','Delgoda','Gampaha'], selectedItemText: ctrl.city, onSelected: (selectedValue){
+              
+              DropDown(items: const ['Dompe','Pugoda','Delgoda','Gampaha'], selectedItemText: ctrl.city, onSelected: (selectedValue){
               ctrl.city = selectedValue ?? 'city';
               ctrl.update();
               },),
               const SizedBox(height: 10),
               ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: Color.fromARGB(255, 2, 32, 1),
+                  backgroundColor: Color.fromARGB(255, 3, 38, 2),
                 ),
                 onPressed: (){
                   ctrl.addSeller();

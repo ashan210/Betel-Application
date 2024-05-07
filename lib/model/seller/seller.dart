@@ -15,8 +15,8 @@ class Seller {
   @JsonKey(name: "location")
   String? location;
 
-  @JsonKey(name: "contact number")
-  double? contactnumber;
+  //@JsonKey(name: "contact number")
+  //String? contactnumber;
 
   @JsonKey(name: "large price")
   double? largeprice;
@@ -30,16 +30,20 @@ class Seller {
   @JsonKey(name: "city")
   String? city;
 
+  @JsonKey(name: "contact number two")
+  String? contactnumbertwo;
+
   Seller({
     this.id,
     this.name,
     this.description,
     this.location,
-    this.contactnumber,
+    //this.contactnumber,
     this.largeprice,
     this.mediumprice,
     this.smallprice,
     this.city, 
+    this.contactnumbertwo,
   });
 
   factory Seller.fromJson(Map<String, dynamic> json) => _$SellerFromJson(json);

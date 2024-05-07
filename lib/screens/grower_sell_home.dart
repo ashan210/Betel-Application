@@ -37,25 +37,29 @@ class GrowerSellHome extends StatelessWidget {
               height: 70,
               
               child: ListView.builder(
-                
-                scrollDirection: Axis.horizontal,
-                itemCount: ctrl.sellerCitys.length,
-                itemBuilder: (context, index){
-                  return InkWell(
-                    splashColor: Color.fromARGB(255, 2, 32, 1),
-                    onTap: (){
-                      ctrl.filterByCity(ctrl.sellerCitys[index].name ?? '');
-                    },
-                    child: Padding(
-                      padding: const EdgeInsets.all(6),
-                      
-                      child: Chip(label: Text(ctrl.sellerCitys[index].name ?? 'Error')),
-                      
-                    ),
-                    
-                  );
-                  
-                }),
+  scrollDirection: Axis.horizontal,
+  itemCount: ctrl.sellerCitys.length,
+  itemBuilder: (context, index) {
+    return InkWell(
+      splashColor: Color.fromARGB(255, 2, 32, 1), // Set the splash color to green
+      onTap: () {
+        ctrl.filterByCity(ctrl.sellerCitys[index].name ?? '');
+      },
+      child: Padding(
+        padding: const EdgeInsets.all(6),
+        child: Chip(
+          backgroundColor: Color.fromARGB(255, 2, 32, 1), // Set the background color of the Chip to green
+          label: Text(
+            ctrl.sellerCitys[index].name ?? 'Error',
+            style: TextStyle(
+              color: Colors.white, // Set the text color of the Chip to white
+            ),
+          ),
+        ),
+      ),
+    );
+  },
+),
             ),
             
               

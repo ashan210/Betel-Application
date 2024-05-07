@@ -65,14 +65,14 @@ class SellerDescriptionPage extends StatelessWidget {
               color: Colors.white
             ),
             ),
-            Text(
-              '${seller.contactnumber ?? ''}',
+            Text(seller.contactnumbertwo ?? '',
               style: TextStyle(
                 fontSize: 24,
                 color: Colors.blue,
                 fontWeight: FontWeight.bold,
               ),
             ),
+            
             const SizedBox(height: 20),
             Text('Large Betel Price;',
             style: const TextStyle(

@@ -11,11 +11,12 @@ Seller _$SellerFromJson(Map<String, dynamic> json) => Seller(
       name: json['name'] as String?,
       description: json['description'] as String?,
       location: json['location'] as String?,
-      contactnumber: (json['contact number'] as num?)?.toDouble(),
+      //contactnumber: json['contact number'] as String?,
       largeprice: (json['large price'] as num?)?.toDouble(),
       mediumprice: (json['medium price'] as num?)?.toDouble(),
       smallprice: (json['small price'] as num?)?.toDouble(),
       city: json['city'] as String?,
+      contactnumbertwo: json['contact number two'] as String?,
     );
 
 Map<String, dynamic> _$SellerToJson(Seller instance) => <String, dynamic>{
@@ -23,9 +24,10 @@ Map<String, dynamic> _$SellerToJson(Seller instance) => <String, dynamic>{
       'name': instance.name,
       'description': instance.description,
       'location': instance.location,
-      'contact number': instance.contactnumber,
+      //'contact number': instance.contactnumber,
       'large price': instance.largeprice,
       'medium price': instance.mediumprice,
       'small price': instance.smallprice,
       'city': instance.city,
+      'contact number two': instance.contactnumbertwo,
     };

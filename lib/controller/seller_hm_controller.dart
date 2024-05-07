@@ -12,10 +12,11 @@ class SellerHMController extends GetxController{
   TextEditingController sellerNameCtrl = TextEditingController();
   TextEditingController sellerDescriptionCtrl = TextEditingController();
   TextEditingController sellerLocation = TextEditingController();
-  TextEditingController sellerContactNumber = TextEditingController();
+  //TextEditingController sellerContactNumber = TextEditingController();
   TextEditingController sellerLargePrice = TextEditingController();
   TextEditingController sellerMediumPrice = TextEditingController();
   TextEditingController sellerSmallPrice = TextEditingController();
+  TextEditingController sellerContactNumberTwo = TextEditingController();
 
   String city = 'dompe';
 
@@ -36,12 +37,12 @@ addSeller(){
     name: sellerNameCtrl.text,
     description: sellerDescriptionCtrl.text,
     location: sellerLocation.text,
-    contactnumber: double.tryParse(sellerContactNumber.text),
+   // contactnumber: sellerContactNumber.text,
     largeprice: double.tryParse(sellerLargePrice.text),
     mediumprice: double.tryParse(sellerMediumPrice.text),
     smallprice: double.tryParse(sellerSmallPrice.text),
     city: city, 
-
+    contactnumbertwo: sellerContactNumberTwo.text,
   );
   final sellerJson = seller.toJson();
   doc.set(sellerJson);
@@ -72,10 +73,11 @@ setValuesDefault(){
  sellerNameCtrl.clear();
  sellerDescriptionCtrl.clear();
  sellerLocation.clear();
- sellerContactNumber.clear();
+ //sellerContactNumber.clear();
  sellerLargePrice.clear();
  sellerMediumPrice.clear();
  sellerSmallPrice.clear();
+ sellerContactNumberTwo.clear();
 
  city = 'dompe';
  update();
