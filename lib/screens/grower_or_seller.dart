@@ -16,7 +16,7 @@ class GrowerORSellerPage extends StatelessWidget {
           decoration: BoxDecoration(
             color: Colors.blueGrey[50]!.withOpacity(0.8),// Adjust transparency as needed
             image: DecorationImage(
-              image: AssetImage("assets/bg3.png"), // Replace with your image path (inside assets folder)
+              image: AssetImage("assets/canva6.png"), // Replace with your image path (inside assets folder)
               fit: BoxFit.cover,
             ),
           ),

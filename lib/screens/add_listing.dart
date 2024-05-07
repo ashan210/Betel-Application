@@ -147,7 +147,7 @@ class AddListing extends StatelessWidget {
               style: TextStyle(color: Colors.white, fontSize: 17),
               ),
               
-              DropDown(items: const ['Dompe','Pugoda','Delgoda','Gampaha'], selectedItemText: ctrl.city, onSelected: (selectedValue){
+              DropDown(items: const ['Ampara','Anuradhapura','Badulla','Gampaha','Batticaloa','Colombo','Galle','Hambantota','Jaffna','Kaluthara','Kurunegala','Mannar','Mathale','Mathara','Monaragala','Mulathivu','NuwaraEliya','Polonnaruwa','Puttalam','Ratnapura','Trincomalee','Vavuniya'], selectedItemText: ctrl.city, onSelected: (selectedValue){
               ctrl.city = selectedValue ?? 'city';
               ctrl.update();
               },),

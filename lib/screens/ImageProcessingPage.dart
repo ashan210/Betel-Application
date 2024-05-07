@@ -119,16 +119,21 @@ class _ImageProcessingPageState extends State<ImageProcessingPage> {
             ),
             SizedBox(height: 20),
             if (_labelNames != null)
-              Column(
-                children: _labelNames!.map((label) => Text(
-                  label,
-                  style: TextStyle(
-                    fontSize: 28, // Adjust the text size as needed
-                    fontWeight: FontWeight.bold,
-                    color: Colors.white, // Make the text bold
+              
+              Padding(
+                padding: const EdgeInsets.all(25.0),
+                child: Column(
+                    children: _labelNames!.map((label) => Text(
+                      label,
+                      style: TextStyle(
+                        fontSize: 28, // Adjust the text size as needed
+                        fontWeight: FontWeight.bold,
+                        color: Colors.white, // Make the text bold
+                      ),
+                    )).toList(),
                   ),
-                )).toList(),
               ),
+              
           ],
         ),
       ),

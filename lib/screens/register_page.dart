@@ -17,7 +17,7 @@ class RegisterPage extends StatelessWidget {
         decoration: BoxDecoration(
           color: Colors.blueGrey[50]!.withOpacity(0.8),
           image: DecorationImage(
-            image: AssetImage("assets/bg3.png"),
+            image: AssetImage("assets/canva5.png"),
             fit: BoxFit.cover,
             ),
         ),
@@ -34,7 +34,7 @@ class RegisterPage extends StatelessWidget {
             ),
             const SizedBox(height: 20),
             TextField(
-              keyboardType: TextInputType.phone,
+              keyboardType: TextInputType.text,
               controller: ctrl.registerNameCtrl,
               decoration: InputDecoration(
                 border: OutlineInputBorder(

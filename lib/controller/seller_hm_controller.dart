@@ -18,7 +18,7 @@ class SellerHMController extends GetxController{
   TextEditingController sellerSmallPrice = TextEditingController();
   TextEditingController sellerContactNumberTwo = TextEditingController();
 
-  String city = 'dompe';
+  String city = 'Gampaha';
 
   List<Seller> sellers = [];
 
@@ -79,7 +79,7 @@ setValuesDefault(){
  sellerSmallPrice.clear();
  sellerContactNumberTwo.clear();
 
- city = 'dompe';
+ city = 'Gampaha';
  update();
 
 }
