@@ -15,7 +15,7 @@ class GrowerORSellerPage extends StatelessWidget {
           width: double.maxFinite,
           decoration: BoxDecoration(
             color: Colors.blueGrey[50]!.withOpacity(0.8),// Adjust transparency as needed
-            image: DecorationImage(
+            image: const DecorationImage(
               image: AssetImage("assets/canva6.png"), // Replace with your image path (inside assets folder)
               fit: BoxFit.cover,
             ),
@@ -39,28 +39,28 @@ class GrowerORSellerPage extends StatelessWidget {
                 children: [
                   ElevatedButton(
                     onPressed: () {
-                      Get.to(RegisterPage());
+                      Get.to(const RegisterPage());
                     },
                     style: ElevatedButton.styleFrom(
                       foregroundColor: Colors.white,
-                      backgroundColor: Color.fromARGB(255, 2, 32, 1),
+                      backgroundColor: const Color.fromARGB(255, 2, 32, 1),
                     ),
                     child: const Text('Betel Grower',
                     style: TextStyle(fontSize: 17),
                     ),
                   ),
-                  Text("OR",
+                  const Text("OR",
                         style: TextStyle(color: Colors.black, 
                         fontSize: 18, 
                         fontWeight: FontWeight.w600),
                         ),
                   ElevatedButton(
                     onPressed: () {
-                      Get.to(RegisterPage());
+                      Get.to(const RegisterPage());
                     },
                     style: ElevatedButton.styleFrom(
                       foregroundColor: Colors.white,
-                      backgroundColor: Color.fromARGB(255, 2, 32, 1),
+                      backgroundColor: const Color.fromARGB(255, 2, 32, 1),
                     ),
                     child: const Text('Betel Seller',
                     style: TextStyle(fontSize: 17),
@@ -69,7 +69,7 @@ class GrowerORSellerPage extends StatelessWidget {
                 ],
               ),
               const SizedBox(height: 20),
-                Text('(Select Your Profession)',
+                const Text('(Select Your Profession)',
                 style: TextStyle(fontSize: 20, color: Color.fromARGB(255, 1, 86, 6), fontWeight: FontWeight.w800),
                 ),
             ],

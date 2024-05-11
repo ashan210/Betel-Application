@@ -12,7 +12,7 @@ return Scaffold(
           shadowColor: Colors.white,
           centerTitle: true,
           leading: IconButton(
-            icon: Icon(Icons.arrow_back),
+            icon: const Icon(Icons.arrow_back),
             color: Colors.white,
             onPressed: () => Navigator.of(context).pop(),
           ),
@@ -31,7 +31,7 @@ return Scaffold(
                 const SizedBox(
                 height: 20,
                ),
-               Row(
+               const Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text("BETEL",
@@ -44,7 +44,7 @@ return Scaffold(
                const SizedBox(
                 height: 10,
                ),
-               Row(
+               const Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text("Piper betle L.",
@@ -54,7 +54,7 @@ return Scaffold(
                         ),
                   ],
                ),
-               Row(
+               const Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text("Family: Piperacea",
@@ -67,7 +67,7 @@ return Scaffold(
                const SizedBox(
                 height: 20,
                ),
-               Row(
+               const Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text("Major Growing Areas",
@@ -90,7 +90,7 @@ return Scaffold(
                 const SizedBox(
                 height: 20,
                ),
-                  Row(
+                  const Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text("Soils and Climatic Requirements",
@@ -103,7 +103,7 @@ return Scaffold(
                     const SizedBox(
                 height: 10,
                ),
-               Row(
+               const Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text("Soil",
@@ -124,7 +124,7 @@ return Scaffold(
                 const SizedBox(
                 height: 20,
                ),
-                Row(
+                const Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text("Climate",
@@ -145,7 +145,7 @@ return Scaffold(
                 const SizedBox(
                 height: 20,
                ),
-               Row(
+               const Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text("Crop Establishment",
@@ -158,7 +158,7 @@ return Scaffold(
                const SizedBox(
                 height: 10,
                ),
-               Row(
+               const Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text("Planting material",
@@ -179,7 +179,7 @@ return Scaffold(
                 const SizedBox(
                 height: 20,
                ),
-               Row(
+               const Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text("Field Planting",
@@ -210,7 +210,7 @@ return Scaffold(
                 const SizedBox(
                 height: 20,
                ),
-               Row(
+               const Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text("Crop Management",
@@ -223,7 +223,7 @@ return Scaffold(
                const SizedBox(
                 height: 10,
                ),
-               Row(
+               const Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text("Fertilizer Application",
@@ -244,7 +244,7 @@ return Scaffold(
                 const SizedBox(
                 height: 20,
                ),
-                Row(
+                const Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text("Fertilizer recommendation",
@@ -265,7 +265,7 @@ return Scaffold(
                 const SizedBox(
                 height: 20,
                ),
-                Row(
+                const Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text("Organic fertilizer",
@@ -286,7 +286,7 @@ return Scaffold(
                 const SizedBox(
                 height: 20,
                ),
-                Row(
+                const Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text("Pruning and Training",
@@ -307,7 +307,7 @@ return Scaffold(
                 const SizedBox(
                 height: 20,
                ),
-               Row(
+               const Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text("Crop Protection",
@@ -320,7 +320,7 @@ return Scaffold(
                const SizedBox(
                 height: 10,
                ),
-               Row(
+               const Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text("Diseases",
@@ -333,7 +333,7 @@ return Scaffold(
                const SizedBox(
                 height: 10,
                ),
-               Row(
+               const Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text("Bacterial Leaf Blight (Oil Disease)",
@@ -385,7 +385,7 @@ return Scaffold(
                 const SizedBox(
                 height: 20,
                ),
-               Row(
+               const Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text("Pests",

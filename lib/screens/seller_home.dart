@@ -21,21 +21,21 @@ class SellerHome extends StatelessWidget {
           shadowColor: Colors.white,
           centerTitle: true,
           leading: IconButton(
-            icon: Icon(Icons.arrow_back),
+            icon: const Icon(Icons.arrow_back),
             color: Colors.white,
             onPressed: () => Navigator.of(context).pop(),
           ),
-          title:  Text('Betel Sellers',
+          title:  const Text('Betel Sellers',
           style: TextStyle(fontWeight: FontWeight.w700 , fontSize: 25, color: Colors.white),
           ),),
         body: ListView.builder(
           itemCount: ctrl.sellers.length,
           itemBuilder: (context,index){
            return  ListTile(title:  Text(ctrl.sellers[index].name ?? '',
-           style: TextStyle(color: Colors.white, fontSize: 18),
+           style: const TextStyle(color: Colors.white, fontSize: 18),
            ),
            subtitle:  Text((ctrl.sellers[index].largeprice ?? 0).toString(),
-           style: TextStyle(color: Colors.white),
+           style: const TextStyle(color: Colors.white),
            ),
            trailing: IconButton(
             icon: const Icon(Icons.business),
@@ -51,7 +51,7 @@ class SellerHome extends StatelessWidget {
             onPressed: () {
              Get.to(const AddListing());
            },
-           backgroundColor: Color.fromARGB(255, 2, 32, 1),
+           backgroundColor: const Color.fromARGB(255, 2, 32, 1),
            child: const Icon(Icons.add),),
        );
      }

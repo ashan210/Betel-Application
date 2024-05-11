@@ -12,7 +12,7 @@ return Scaffold(
           shadowColor: Colors.white,
           centerTitle: true,
           leading: IconButton(
-            icon: Icon(Icons.arrow_back),
+            icon: const Icon(Icons.arrow_back),
             color: Colors.white,
             onPressed: () => Navigator.of(context).pop(),
           ),
@@ -31,7 +31,7 @@ return Scaffold(
                 const SizedBox(
                 height: 20,
                ),
-               Row(
+               const Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text("BETEL",
@@ -44,7 +44,7 @@ return Scaffold(
                const SizedBox(
                 height: 10,
                ),
-               Row(
+               const Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text("Piper betle L.",
@@ -54,7 +54,7 @@ return Scaffold(
                         ),
                   ],
                ),
-               Row(
+               const Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text("Family: Piperacea",
@@ -67,7 +67,7 @@ return Scaffold(
                const SizedBox(
                 height: 20,
                ),
-               Row(
+               const Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text("ප්රධාන වර්ධනය වන ප්රදේශ",
@@ -90,7 +90,7 @@ return Scaffold(
                 const SizedBox(
                 height: 20,
                ),
-                  Row(
+                  const Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text("පාංශු සහ දේශගුණික අවශ්යතා",
@@ -103,7 +103,7 @@ return Scaffold(
                     const SizedBox(
                 height: 10,
                ),
-               Row(
+               const Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text("පාංශු",
@@ -124,7 +124,7 @@ return Scaffold(
                 const SizedBox(
                 height: 20,
                ),
-                Row(
+                const Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text("දේශගුණය",
@@ -145,7 +145,7 @@ return Scaffold(
                 const SizedBox(
                 height: 20,
                ),
-               Row(
+               const Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text("බෝග පිහිටුවීම",
@@ -158,7 +158,7 @@ return Scaffold(
                const SizedBox(
                 height: 10,
                ),
-               Row(
+               const Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text("රෝපණ ද්රව්ය",
@@ -179,7 +179,7 @@ return Scaffold(
                 const SizedBox(
                 height: 20,
                ),
-               Row(
+               const Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text("ක්ෂේත්ර රෝපණ",
@@ -210,7 +210,7 @@ return Scaffold(
                 const SizedBox(
                 height: 20,
                ),
-               Row(
+               const Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text("බෝග කළමනාකරණය",
@@ -223,7 +223,7 @@ return Scaffold(
                const SizedBox(
                 height: 10,
                ),
-               Row(
+               const Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text("පොහොර යෙදීම",
@@ -244,7 +244,7 @@ return Scaffold(
                 const SizedBox(
                 height: 20,
                ),
-                Row(
+                const Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text("පොහොර නිර්දේශය",
@@ -265,7 +265,7 @@ return Scaffold(
                 const SizedBox(
                 height: 20,
                ),
-                Row(
+                const Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text("කාබනික පොහොර",
@@ -286,7 +286,7 @@ return Scaffold(
                 const SizedBox(
                 height: 20,
                ),
-                Row(
+                const Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text("කප්පාදු කිරීම සහ පුහුණුව",
@@ -307,7 +307,7 @@ return Scaffold(
                 const SizedBox(
                 height: 20,
                ),
-               Row(
+               const Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text("බෝග ආරක්ෂණය",
@@ -320,7 +320,7 @@ return Scaffold(
                const SizedBox(
                 height: 10,
                ),
-               Row(
+               const Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text("රෝග",
@@ -333,7 +333,7 @@ return Scaffold(
                const SizedBox(
                 height: 10,
                ),
-               Row(
+               const Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text("Bacterial Leaf Blight (Oil Disease)",
@@ -385,7 +385,7 @@ return Scaffold(
                 const SizedBox(
                 height: 20,
                ),
-               Row(
+               const Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text("කෘමි හානි",

@@ -1,6 +1,4 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
 import 'package:get/get.dart';
 import 'package:my_first_app/model/seller/seller.dart';
 
@@ -18,7 +16,7 @@ class SellerDescriptionPage extends StatelessWidget {
         shadowColor: Colors.white,
         centerTitle: true,
           leading: IconButton(
-            icon: Icon(Icons.arrow_back),
+            icon: const Icon(Icons.arrow_back),
             color: Colors.white,
             onPressed: () => Navigator.of(context).pop(),
           ),
@@ -29,8 +27,8 @@ class SellerDescriptionPage extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Text('Name :',
-            style: const TextStyle(
+            const Text('Name :',
+            style: TextStyle(
               fontSize: 20,
               color: Colors.white
             ),
@@ -44,8 +42,8 @@ class SellerDescriptionPage extends StatelessWidget {
             ),
             ),
             const SizedBox(height: 20),
-            Text('Description :',
-            style: const TextStyle(
+            const Text('Description :',
+            style: TextStyle(
               fontSize: 20,
               color: Colors.white
             ),
@@ -59,14 +57,14 @@ class SellerDescriptionPage extends StatelessWidget {
             ),
             ),
             const SizedBox(height: 20),
-            Text('Contact Number :',
-            style: const TextStyle(
+            const Text('Contact Number :',
+            style: TextStyle(
               fontSize: 20,
               color: Colors.white
             ),
             ),
             Text(seller.contactnumbertwo ?? '',
-              style: TextStyle(
+              style: const TextStyle(
                 fontSize: 28,
                 color: Colors.blue,
                 fontWeight: FontWeight.bold,
@@ -74,8 +72,8 @@ class SellerDescriptionPage extends StatelessWidget {
             ),
             
             const SizedBox(height: 20),
-            Text('Large Betel Price :',
-            style: const TextStyle(
+            const Text('Large Betel Price :',
+            style: TextStyle(
               fontSize: 20,
               color: Colors.white
             ),
@@ -89,8 +87,8 @@ class SellerDescriptionPage extends StatelessWidget {
             ),
             ),
             const SizedBox(height: 20),
-            Text('Medium Betel Price :',
-            style: const TextStyle(
+            const Text('Medium Betel Price :',
+            style: TextStyle(
               fontSize: 20,
               color: Colors.white
             ),
@@ -104,8 +102,8 @@ class SellerDescriptionPage extends StatelessWidget {
             ),
             ),
             const SizedBox(height: 20),
-            Text('Small Betel Price :',
-            style: const TextStyle(
+            const Text('Small Betel Price :',
+            style: TextStyle(
               fontSize: 20,
               color: Colors.white
             ),
@@ -119,15 +117,15 @@ class SellerDescriptionPage extends StatelessWidget {
             ),
             ),
             const SizedBox(height: 20),
-            Text('Location :',
-            style: const TextStyle(
+            const Text('Location :',
+            style: TextStyle(
               fontSize: 20,
               color: Colors.white
             ),
             ),
             Text(
               seller.location ?? '',
-              style: TextStyle(
+              style: const TextStyle(
                 fontSize: 28,
                 color: Colors.yellow,
                 fontWeight: FontWeight.bold,

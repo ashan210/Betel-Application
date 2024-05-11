@@ -17,7 +17,7 @@ class AddListing extends StatelessWidget {
           shadowColor: Colors.white,
           centerTitle: true,
           leading: IconButton(
-            icon: Icon(Icons.arrow_back),
+            icon: const Icon(Icons.arrow_back),
             color: Colors.white,
             onPressed: () => Navigator.of(context).pop(),
           ),
@@ -32,10 +32,10 @@ class AddListing extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               const Text('Add Your Details',style: TextStyle(fontSize: 30,color: Colors.white, fontWeight: FontWeight.bold),),
-              SizedBox(height: 10,),
+              const SizedBox(height: 10,),
               TextField(
                 controller: ctrl.sellerNameCtrl,
-                style: TextStyle(color: Colors.white),
+                style: const TextStyle(color: Colors.white),
                 decoration: InputDecoration(
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(10)
@@ -44,13 +44,13 @@ class AddListing extends StatelessWidget {
                   style: TextStyle(color: Colors.white,),
                   ),
                   hintText: 'Enter Your Name',
-                  hintStyle: TextStyle(color: Colors.white,),
+                  hintStyle: const TextStyle(color: Colors.white,),
                 ),
               ),
               const SizedBox(height: 10),
               TextField(
                 controller: ctrl.sellerDescriptionCtrl,
-                style: TextStyle(color: Colors.white),
+                style: const TextStyle(color: Colors.white),
                 decoration: InputDecoration(
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(10)
@@ -59,14 +59,14 @@ class AddListing extends StatelessWidget {
                   style: TextStyle(color: Colors.white,),
                   ),
                   hintText: 'Enter Specific Information About Your Purchase',
-                  hintStyle: TextStyle(color: Colors.white,),
+                  hintStyle: const TextStyle(color: Colors.white,),
                ),
                 maxLines: 4,
               ),
               const SizedBox(height: 10),
               TextField(
                 controller: ctrl.sellerLocation,
-                style: TextStyle(color: Colors.white),
+                style: const TextStyle(color: Colors.white),
                 decoration: InputDecoration(
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(10)
@@ -75,13 +75,13 @@ class AddListing extends StatelessWidget {
                   style: TextStyle(color: Colors.white,),
                   ),
                   hintText: 'Provide The Location Where You Make Purchases',
-                  hintStyle: TextStyle(color: Colors.white,),
+                  hintStyle: const TextStyle(color: Colors.white,),
                 ),
               ),
               const SizedBox(height: 10),
               TextField(
                 controller: ctrl.sellerContactNumberTwo,
-                style: TextStyle(color: Colors.white),
+                style: const TextStyle(color: Colors.white),
                 keyboardType: TextInputType.number,
                 decoration: InputDecoration(
                   border: OutlineInputBorder(
@@ -91,13 +91,13 @@ class AddListing extends StatelessWidget {
                   style: TextStyle(color: Colors.white,),
                   ),
                   hintText: 'Add your Contact Number',
-                  hintStyle: TextStyle(color: Colors.white,),
+                  hintStyle: const TextStyle(color: Colors.white,),
                 ),
               ),
               const SizedBox(height: 10),
               TextField(
                 controller: ctrl.sellerLargePrice,
-                style: TextStyle(color: Colors.white),
+                style: const TextStyle(color: Colors.white),
                 keyboardType: TextInputType.number,
                 decoration: InputDecoration(
                   border: OutlineInputBorder(
@@ -107,13 +107,13 @@ class AddListing extends StatelessWidget {
                   style: TextStyle(color: Colors.white,),
                   ),
                   hintText: 'Price Of Buying 1000 LARGE Size Betel Leaves',
-                  hintStyle: TextStyle(color: Colors.white,),
+                  hintStyle: const TextStyle(color: Colors.white,),
                 ),
               ),
               const SizedBox(height: 10),
               TextField(
                 controller: ctrl.sellerMediumPrice,
-                style: TextStyle(color: Colors.white),
+                style: const TextStyle(color: Colors.white),
                 keyboardType: TextInputType.number,
                 decoration: InputDecoration(
                   border: OutlineInputBorder(
@@ -123,13 +123,13 @@ class AddListing extends StatelessWidget {
                   style: TextStyle(color: Colors.white,),
                   ),
                   hintText: 'Price Of Buying 1000 MEDIUM Size Betel Leaves',
-                  hintStyle: TextStyle(color: Colors.white,),
+                  hintStyle: const TextStyle(color: Colors.white,),
                 ),
               ),
               const SizedBox(height: 10),
               TextField(
                 controller: ctrl.sellerSmallPrice,
-                style: TextStyle(color: Colors.white),
+                style: const TextStyle(color: Colors.white),
                 keyboardType: TextInputType.number,
                 decoration: InputDecoration(
                   border: OutlineInputBorder(
@@ -139,7 +139,7 @@ class AddListing extends StatelessWidget {
                   style: TextStyle(color: Colors.white,),
                   ),
                   hintText: 'Price Of Buying 1000 SMALL Size Betel Leaves',
-                  hintStyle: TextStyle(color: Colors.white,),
+                  hintStyle: const TextStyle(color: Colors.white,),
                 ),
               ),
               const SizedBox(height: 10),
@@ -154,7 +154,7 @@ class AddListing extends StatelessWidget {
               const SizedBox(height: 10),
               ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: Color.fromARGB(255, 3, 38, 2),
+                  backgroundColor: const Color.fromARGB(255, 3, 38, 2),
                 ),
                 onPressed: (){
                   ctrl.addSeller();

@@ -17,21 +17,10 @@ import 'package:my_first_app/screens/login_page.dart';
 class GrowerScreenTamil extends StatelessWidget {
   const GrowerScreenTamil({super.key});
 
-  //@override
-  //State<HomeScreen> createState() => _HomeScreenState();
-//}
-
-//class _HomeScreenState extends State<HomeScreen> {
-  //final _formHomeScreenKey = GlobalKey<FormState>();
-  //bool agreePersonalData = true;
-  //@override
+ 
   @override
   Widget build(BuildContext context) {
-    //return MaterialApp(
-      //debugShowCheckedModeBanner: false,
-      //title: "betel app",
-      
-       //home: 
+     
       
        return Scaffold(
          backgroundColor:const Color.fromARGB(255, 1, 86, 6),
@@ -46,7 +35,7 @@ class GrowerScreenTamil extends StatelessWidget {
             IconButton(onPressed: () {
               GetStorage box = GetStorage();
               box.erase();
-              Get.offAll(LoginPage());
+              Get.offAll(const LoginPage());
             }, icon: const Icon(Icons.logout, color: Colors.white, size: 30,),
             ),
           ],
@@ -58,13 +47,7 @@ class GrowerScreenTamil extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                   //const Text(
-                    //"WELCOME !!!",
-                  //style: TextStyle(color: Colors.white,
-                   //fontSize: 20,
-                    //fontWeight: FontWeight.w600),
-                                   
-                 //),
+                  
 
                  const SizedBox(
                 height: 20,
@@ -322,7 +305,7 @@ class GrowerScreenTamil extends StatelessWidget {
                   children: [
                     GestureDetector(
                       onTap:() {
-                        Get.to( AboutBetelTamil());
+                        Get.to( const AboutBetelTamil());
                       },
                       child: Container(
                         padding:const EdgeInsets.all(15),
@@ -356,7 +339,7 @@ class GrowerScreenTamil extends StatelessWidget {
              ),
 
                //footer
-              Text(
+              const Text(
                           "Developed by Ashan Hapangama",
                           style: TextStyle(color: Colors.white,
                           fontSize: 10,

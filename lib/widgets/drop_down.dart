@@ -1,5 +1,3 @@
-import 'dart:ui';
-
 import 'package:flutter/material.dart';
 import 'package:dropdown_button2/dropdown_button2.dart';
 
@@ -27,7 +25,7 @@ class DropDown extends StatelessWidget {
             width: 410,
             decoration: BoxDecoration(
               
-              color: Color.fromARGB(255, 3, 38, 2), // Set background color of the dropdown button to green
+              color: const Color.fromARGB(255, 3, 38, 2), // Set background color of the dropdown button to green
               borderRadius: BorderRadius.circular(8.0),
               // Optional: Add border radius for button
             ),
@@ -36,7 +34,7 @@ class DropDown extends StatelessWidget {
               hint: Center(
                 child: Text(
                   selectedItemText,
-                  style: TextStyle(
+                  style: const TextStyle(
                     
                     fontSize: 14,
                     color: Colors.white,

@@ -12,7 +12,7 @@ return Scaffold(
           shadowColor: Colors.white,
           centerTitle: true,
           leading: IconButton(
-            icon: Icon(Icons.arrow_back),
+            icon: const Icon(Icons.arrow_back),
             color: Colors.white,
             onPressed: () => Navigator.of(context).pop(),
           ),
@@ -31,7 +31,7 @@ return Scaffold(
                 const SizedBox(
                 height: 20,
                ),
-               Row(
+               const Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text("BETEL",
@@ -44,7 +44,7 @@ return Scaffold(
                const SizedBox(
                 height: 10,
                ),
-               Row(
+               const Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text("Piper betle L.",
@@ -54,7 +54,7 @@ return Scaffold(
                         ),
                   ],
                ),
-               Row(
+               const Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text("Family: Piperacea",
@@ -67,7 +67,7 @@ return Scaffold(
                const SizedBox(
                 height: 20,
                ),
-               Row(
+               const Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text("முக்கிய வளரும் பகுதிகள்",
@@ -90,7 +90,7 @@ return Scaffold(
                 const SizedBox(
                 height: 20,
                ),
-                  Row(
+                  const Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text("மண் மற்றும் காலநிலை \n              தேவைகள்",
@@ -103,7 +103,7 @@ return Scaffold(
                     const SizedBox(
                 height: 10,
                ),
-               Row(
+               const Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text("மண்",
@@ -124,7 +124,7 @@ return Scaffold(
                 const SizedBox(
                 height: 20,
                ),
-                Row(
+                const Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text("காலநிலை",
@@ -145,7 +145,7 @@ return Scaffold(
                 const SizedBox(
                 height: 20,
                ),
-               Row(
+               const Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text("பயிர் நிறுவுதல்",
@@ -158,7 +158,7 @@ return Scaffold(
                const SizedBox(
                 height: 10,
                ),
-               Row(
+               const Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text("நடவு பொருள்",
@@ -179,7 +179,7 @@ return Scaffold(
                 const SizedBox(
                 height: 20,
                ),
-               Row(
+               const Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text("வயல் நடவு",
@@ -210,7 +210,7 @@ return Scaffold(
                 const SizedBox(
                 height: 20,
                ),
-               Row(
+               const Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text("பயிர் மேலாண்மை",
@@ -223,7 +223,7 @@ return Scaffold(
                const SizedBox(
                 height: 10,
                ),
-               Row(
+               const Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text("உர பயன்பாடு",
@@ -244,7 +244,7 @@ return Scaffold(
                 const SizedBox(
                 height: 20,
                ),
-                Row(
+                const Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text("உர பரிந்துரை",
@@ -265,7 +265,7 @@ return Scaffold(
                 const SizedBox(
                 height: 20,
                ),
-                Row(
+                const Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text("கரிம உரம்",
@@ -286,7 +286,7 @@ return Scaffold(
                 const SizedBox(
                 height: 20,
                ),
-                Row(
+                const Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text("கத்தரித்தல் மற்றும் பயிற்சி",
@@ -307,7 +307,7 @@ return Scaffold(
                 const SizedBox(
                 height: 20,
                ),
-               Row(
+               const Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text("பயிர் பாதுகாப்பு",
@@ -320,7 +320,7 @@ return Scaffold(
                const SizedBox(
                 height: 10,
                ),
-               Row(
+               const Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text("நோய்கள்",
@@ -333,7 +333,7 @@ return Scaffold(
                const SizedBox(
                 height: 10,
                ),
-               Row(
+               const Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text("Bacterial Leaf Blight (Oil Disease)",
@@ -385,7 +385,7 @@ return Scaffold(
                 const SizedBox(
                 height: 20,
                ),
-               Row(
+               const Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text("பூச்சிகள்",

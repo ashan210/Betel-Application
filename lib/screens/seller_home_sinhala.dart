@@ -16,21 +16,10 @@ import 'package:my_first_app/screens/seller_home_tamil.dart';
 class SellerHomeSinhala extends StatelessWidget {
   const SellerHomeSinhala({super.key});
 
-  //@override
-  //State<HomeScreen> createState() => _HomeScreenState();
-//}
-
-//class _HomeScreenState extends State<HomeScreen> {
-  //final _formHomeScreenKey = GlobalKey<FormState>();
-  //bool agreePersonalData = true;
-  //@override
+ 
   @override
   Widget build(BuildContext context) {
-    //return MaterialApp(
-      //debugShowCheckedModeBanner: false,
-      //title: "betel app",
-      
-       //home: 
+   
        
        return Scaffold(
          backgroundColor:const Color.fromARGB(255, 1, 86, 6),
@@ -45,7 +34,7 @@ class SellerHomeSinhala extends StatelessWidget {
             IconButton(onPressed: () {
               GetStorage box = GetStorage();
               box.erase();
-              Get.offAll(LoginPage());
+              Get.offAll(const LoginPage());
             }, icon: const Icon(Icons.logout, color: Colors.white, size: 30,),
             ),
           ],
@@ -314,7 +303,7 @@ class SellerHomeSinhala extends StatelessWidget {
                   children: [
                     GestureDetector(
                       onTap:() {
-                        Get.to( AboutBetelSinhala());
+                        Get.to( const AboutBetelSinhala());
                       },
                       child: Container(
                         padding:const EdgeInsets.all(15),
@@ -348,7 +337,7 @@ class SellerHomeSinhala extends StatelessWidget {
              ),
 
                //footer
-              Text(
+              const Text(
                           "Developed by Ashan Hapangama",
                           style: TextStyle(color: Colors.white,
                           fontSize: 10,

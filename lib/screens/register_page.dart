@@ -16,7 +16,7 @@ class RegisterPage extends StatelessWidget {
         width: double.maxFinite,
         decoration: BoxDecoration(
           color: Colors.blueGrey[50]!.withOpacity(0.8),
-          image: DecorationImage(
+          image: const DecorationImage(
             image: AssetImage("assets/canva5.png"),
             fit: BoxFit.cover,
             ),
@@ -42,7 +42,7 @@ class RegisterPage extends StatelessWidget {
                 ),
                 prefixIcon: const Icon(Icons.phone_android),
                 labelText: 'Your Name',
-                labelStyle: TextStyle(fontSize: 17, fontWeight:FontWeight.w500),
+                labelStyle: const TextStyle(fontSize: 17, fontWeight:FontWeight.w500),
                 hintText: 'Enter Your Name',
               ),
             ),
@@ -56,7 +56,7 @@ class RegisterPage extends StatelessWidget {
                 ),
                 prefixIcon: const Icon(Icons.phone_android),
                 labelText: 'Mobile Number',
-                labelStyle: TextStyle(fontSize: 17, fontWeight:FontWeight.w500),
+                labelStyle: const TextStyle(fontSize: 17, fontWeight:FontWeight.w500),
                 hintText: 'Enter Your Mobile Number',
               ),
             ),
@@ -79,10 +79,10 @@ class RegisterPage extends StatelessWidget {
               },
               style: ElevatedButton.styleFrom(
                 foregroundColor: Colors.white,
-                backgroundColor: Color.fromARGB(255, 2, 32, 1),
+                backgroundColor: const Color.fromARGB(255, 2, 32, 1),
               ),
               child: Text( ctrl.otpFieldShown ? 'Register' : 'Send OTP',
-              style: TextStyle(fontSize: 17),
+              style: const TextStyle(fontSize: 17),
               ),
             ),
             TextButton(

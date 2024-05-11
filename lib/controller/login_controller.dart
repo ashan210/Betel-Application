@@ -99,7 +99,7 @@ Future<void> loginWithPhone() async {
         var userData = userDoc.data() as Map<String, dynamic>;
         box.write('loginUser', userData);
         loginNumberCtrl.clear();
-        Get.to(GrowerScreen());
+        Get.to(const GrowerScreen());
         Get.snackbar('Success', 'Login Successful', colorText: Colors.green);
 
       } else {
@@ -124,7 +124,7 @@ Future<void> loginWithPhonetwo() async {
         var userData = userDoc.data() as Map<String, dynamic>;
         box.write('loginUser', userData);
         loginNumberCtrl.clear();
-        Get.to(HomeScreen());
+        Get.to(const HomeScreen());
         Get.snackbar('Success', 'Login Successful', colorText: Colors.green);
 
       } else {

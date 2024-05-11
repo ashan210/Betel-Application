@@ -19,23 +19,23 @@ class SellerCard extends StatelessWidget {
       },
       child: Card(
         elevation: 2,
-        color:  Color.fromARGB(255, 2, 32, 1),
+        color:  const Color.fromARGB(255, 2, 32, 1),
         child: Padding(
           padding: const EdgeInsets.all(8.0),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              SizedBox(height: 9),
+              const SizedBox(height: 9),
               Text(name,
-              style: TextStyle(color: Colors.white, fontSize: 16),
+              style: const TextStyle(color: Colors.white, fontSize: 16),
               overflow: TextOverflow.ellipsis,
               ),
-              SizedBox(height: 9),
+              const SizedBox(height: 9),
               Text('Rs : $largePrice',
-              style: TextStyle(color: Colors.white, fontSize: 16),
+              style: const TextStyle(color: Colors.white, fontSize: 16),
               overflow: TextOverflow.ellipsis,
               ),
-              SizedBox(height: 9),
+              const SizedBox(height: 9),
               Container(
                 padding: const EdgeInsets.symmetric(horizontal: 8),
                 decoration: BoxDecoration(
